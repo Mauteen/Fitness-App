@@ -26,7 +26,7 @@ export async function signUp(formData: FormData) {
     email,
     password,
     options: {
-      emailRedirectTo: `${process.env.NEXT_PUBLIC_SITE_URL ?? ""}/auth/callback`,
+      emailRedirectTo: `https://fitguide-delta.vercel.app/auth/callback`,
     },
   });
 
