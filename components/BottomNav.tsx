@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
+import { useProgressStore } from "@/store/progressStore";
 
 const navItems = [
   {
@@ -52,6 +53,8 @@ export default function SideNav() {
   async function handleSignOut() {
     const supabase = createClient();
     await supabase.auth.signOut();
+    // Reset progress store so next user starts fresh
+    useProgressStore.setState({ completedDates: [], streak: 0, lastCompletedDate: null, hydrated: false });
     router.push("/auth/login");
   }
 
