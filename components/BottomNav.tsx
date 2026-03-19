@@ -50,6 +50,8 @@ export default function SideNav() {
   const pathname = usePathname();
   const router = useRouter();
 
+  if (pathname.startsWith("/auth") || pathname === "/welcome") return null;
+
   async function handleSignOut() {
     const supabase = createClient();
     await supabase.auth.signOut();
