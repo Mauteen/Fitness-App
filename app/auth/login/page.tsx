@@ -13,9 +13,15 @@ export default function LoginPage() {
     setError("");
     setLoading(true);
     const formData = new FormData(e.currentTarget);
-    const result = await signIn(formData);
-    if (result?.error) {
-      setError(result.error);
+    try {
+      const result = await signIn(formData);
+      if (result?.error) {
+        setError(result.error);
+        setLoading(false);
+      }
+      // On success, signIn calls redirect("/") — page navigates away, no need to reset loading
+    } catch {
+      setError("Something went wrong. Please try again.");
       setLoading(false);
     }
   }

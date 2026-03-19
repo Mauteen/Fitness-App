@@ -28,13 +28,18 @@ export default function SignupPage() {
     }
 
     setLoading(true);
-    const result = await signUp(formData);
-    if (result?.error) {
-      setError(result.error);
-    } else if (result?.success) {
-      setSuccess(result.success);
+    try {
+      const result = await signUp(formData);
+      if (result?.error) {
+        setError(result.error);
+      } else if (result?.success) {
+        setSuccess(result.success);
+      }
+    } catch {
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   }
 
   return (
