@@ -160,6 +160,17 @@ export default function SignupPage() {
 
           <form onSubmit={handleSubmit}>
             <div className="field">
+              <label htmlFor="username">Username</label>
+              <input
+                id="username"
+                name="username"
+                type="text"
+                placeholder="e.g. Mauteen"
+                required
+                autoComplete="username"
+              />
+            </div>
+            <div className="field">
               <label htmlFor="email">Email</label>
               <input
                 id="email"

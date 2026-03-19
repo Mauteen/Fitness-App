@@ -5,14 +5,14 @@ import Link from "next/link";
 import { getAllWorkouts, getWorkoutByDay, getTodayWorkoutDay, getGreeting, formatShortDate, getWeekDates } from "@/lib/workoutUtils";
 import { WorkoutDay } from "@/lib/types";
 import { useProgressStore } from "@/store/progressStore";
-
-const USER_NAME = "Mauteen";
+import { createClient } from "@/lib/supabase/client";
 
 export default function HomePage() {
   const [todayDay, setTodayDay] = useState(1);
   const [greeting, setGreeting] = useState("Welcome back");
   const [todayDate, setTodayDate] = useState("");
   const [weekDates, setWeekDates] = useState<Record<number, Date>>({});
+  const [username, setUsername] = useState("");
   const allWorkouts = getAllWorkouts();
 
   const completedDates = useProgressStore(state => state.completedDates);
@@ -25,6 +25,13 @@ export default function HomePage() {
     setTodayDate(formatShortDate(new Date()));
     setWeekDates(wd);
     hydrate();
+
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (user?.user_metadata?.username) {
+        setUsername(user.user_metadata.username);
+      }
+    });
   }, [hydrate]);
 
   const todayStr = new Date().toISOString().split("T")[0];
@@ -253,7 +260,7 @@ export default function HomePage() {
         <div className="hero-section">
           <div className="max-w-2xl mx-auto">
             <p className="app-name mb-3">FITGUIDE</p>
-            <p className="hero-greeting">{greeting}, {USER_NAME} 👋</p>
+            <p className="hero-greeting">{greeting}, {username || "there"} 👋</p>
             <h1 className="hero-title text-5xl md:text-6xl mb-2">
               {isRestDay ? "Rest &\nRecover" : "Today's\nWorkout"}
             </h1>
