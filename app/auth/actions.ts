@@ -30,20 +30,15 @@ export async function signUp(formData: FormData) {
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
 
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        emailRedirectTo: `https://fitguide-delta.vercel.app/auth/callback`,
-      },
-    });
+    const { error } = await supabase.auth.signUp({ email, password });
 
     if (error) {
       return { error: error.message };
     }
 
-    return { success: "Check your email to confirm your account." };
+    redirect("/");
   } catch (err: unknown) {
+    if (err instanceof Error && err.message === "NEXT_REDIRECT") throw err;
     const msg = err instanceof Error ? err.message : "Sign up failed. Please try again.";
     return { error: msg };
   }

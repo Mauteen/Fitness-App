@@ -6,13 +6,11 @@ import { signUp } from "@/app/auth/actions";
 
 export default function SignupPage() {
   const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError("");
-    setSuccess("");
 
     const formData = new FormData(e.currentTarget);
     const password = formData.get("password") as string;
@@ -32,12 +30,11 @@ export default function SignupPage() {
       const result = await signUp(formData);
       if (result?.error) {
         setError(result.error);
-      } else if (result?.success) {
-        setSuccess(result.success);
+        setLoading(false);
       }
+      // On success, signUp redirects to "/" — no need to reset loading
     } catch {
       setError("Something went wrong. Please try again.");
-    } finally {
       setLoading(false);
     }
   }
@@ -138,16 +135,6 @@ export default function SignupPage() {
           color: #ef4444;
           margin-bottom: 1rem;
         }
-        .success-box {
-          background: #0d1a0d;
-          border: 1px solid #22c55e33;
-          border-radius: 10px;
-          padding: 0.75rem 1rem;
-          font-size: 0.8rem;
-          color: #22c55e;
-          margin-bottom: 1rem;
-          line-height: 1.5;
-        }
         .auth-footer {
           text-align: center;
           margin-top: 1.5rem;
@@ -170,48 +157,45 @@ export default function SignupPage() {
           <p className="auth-sub">Start your fitness journey with FitGuide.</p>
 
           {error && <div className="error-box">{error}</div>}
-          {success && <div className="success-box">✓ {success}</div>}
 
-          {!success && (
-            <form onSubmit={handleSubmit}>
-              <div className="field">
-                <label htmlFor="email">Email</label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="you@example.com"
-                  required
-                  autoComplete="email"
-                />
-              </div>
-              <div className="field">
-                <label htmlFor="password">Password</label>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  placeholder="Min. 6 characters"
-                  required
-                  autoComplete="new-password"
-                />
-              </div>
-              <div className="field">
-                <label htmlFor="confirm">Confirm Password</label>
-                <input
-                  id="confirm"
-                  name="confirm"
-                  type="password"
-                  placeholder="Repeat password"
-                  required
-                  autoComplete="new-password"
-                />
-              </div>
-              <button type="submit" className="submit-btn" disabled={loading}>
-                {loading ? "Creating account…" : "Create Account"}
-              </button>
-            </form>
-          )}
+          <form onSubmit={handleSubmit}>
+            <div className="field">
+              <label htmlFor="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+                autoComplete="email"
+              />
+            </div>
+            <div className="field">
+              <label htmlFor="password">Password</label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Min. 6 characters"
+                required
+                autoComplete="new-password"
+              />
+            </div>
+            <div className="field">
+              <label htmlFor="confirm">Confirm Password</label>
+              <input
+                id="confirm"
+                name="confirm"
+                type="password"
+                placeholder="Repeat password"
+                required
+                autoComplete="new-password"
+              />
+            </div>
+            <button type="submit" className="submit-btn" disabled={loading}>
+              {loading ? "Creating account…" : "Create Account"}
+            </button>
+          </form>
 
           <hr className="divider" />
 
