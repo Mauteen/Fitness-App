@@ -1,56 +1,34 @@
-import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
+// Supabase derives cookie name from project URL: sb-{projectref}-auth-token
+// URL: https://dyiifosinnnsyphknhpb.supabase.co → projectref: dyiifosinnnsyphknhpb
+const SUPABASE_COOKIE_PREFIX = "sb-dyiifosinnnsyphknhpb-auth-token";
+
 export default async function proxy(request: NextRequest) {
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
-    return NextResponse.next({ request });
-  }
-
-  let supabaseResponse = NextResponse.next({ request });
-
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
-    {
-      cookies: {
-        getAll() {
-          return request.cookies.getAll();
-        },
-        setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value }) =>
-            request.cookies.set(name, value)
-          );
-          supabaseResponse = NextResponse.next({ request });
-          cookiesToSet.forEach(({ name, value, options }) =>
-            supabaseResponse.cookies.set(name, value, options)
-          );
-        },
-      },
-    }
-  );
-
-  // Use getSession() — reads from cookie directly, no network call, won't throw
-  const { data: { session } } = await supabase.auth.getSession();
-  const user = session?.user ?? null;
-
   const { pathname } = request.nextUrl;
   const isAuthPage = pathname.startsWith("/auth");
 
+  // Check for Supabase session cookie directly (no SDK needed, works reliably in Edge runtime)
+  const allCookies = request.cookies.getAll();
+  const hasSession = allCookies.some(
+    (c) => c.name === SUPABASE_COOKIE_PREFIX || c.name.startsWith(`${SUPABASE_COOKIE_PREFIX}.`)
+  );
+
   // Unauthenticated → send to login
-  if (!user && !isAuthPage) {
+  if (!hasSession && !isAuthPage) {
     const url = request.nextUrl.clone();
     url.pathname = "/auth/login";
     return NextResponse.redirect(url);
   }
 
   // Authenticated + on auth page → send home
-  if (user && isAuthPage) {
+  if (hasSession && isAuthPage) {
     const url = request.nextUrl.clone();
     url.pathname = "/";
     return NextResponse.redirect(url);
   }
 
-  return supabaseResponse;
+  return NextResponse.next({ request });
 }
 
 export const config = {
