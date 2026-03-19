@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { createClient } from "@/lib/supabase/client";
+import { useRouter } from "next/navigation";
 
 const navItems = [
   {
@@ -45,6 +47,13 @@ const navItems = [
 export default function SideNav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+
+  async function handleSignOut() {
+    const supabase = createClient();
+    await supabase.auth.signOut();
+    router.push("/auth/login");
+  }
 
   return (
     <>
@@ -216,14 +225,38 @@ export default function SideNav() {
 
         /* Footer */
         .drawer-footer {
-          padding: 1rem 1.5rem;
+          padding: 1rem 1.25rem;
           border-top: 1px solid #161616;
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
         }
         .drawer-footer-text {
           font-family: 'DM Sans', sans-serif;
           font-size: 0.7rem;
           color: #333;
           letter-spacing: 0.04em;
+        }
+        .signout-btn {
+          display: flex;
+          align-items: center;
+          gap: 0.6rem;
+          padding: 0.7rem 0.75rem;
+          border-radius: 10px;
+          border: 1px solid #1e1e1e;
+          background: none;
+          cursor: pointer;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.82rem;
+          font-weight: 500;
+          color: #666;
+          width: 100%;
+          transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+        }
+        .signout-btn:hover {
+          background: #1a0808;
+          border-color: #ef444422;
+          color: #ef4444;
         }
       `}</style>
 
@@ -277,6 +310,14 @@ export default function SideNav() {
         </div>
 
         <div className="drawer-footer">
+          <button className="signout-btn" onClick={handleSignOut}>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+              <polyline points="16 17 21 12 16 7"/>
+              <line x1="21" y1="12" x2="9" y2="12"/>
+            </svg>
+            Sign Out
+          </button>
           <p className="drawer-footer-text">© 2025 FitGuide — Built for Mauteen</p>
         </div>
       </nav>
