@@ -226,7 +226,7 @@ export default function ProgressPage() {
         .empty-text { font-size: 0.82rem; color: #555; line-height: 1.6; }
       `}</style>
 
-      <div className="progress-page min-h-screen bg-[#0a0a0a] pb-24">
+      <div className="progress-page min-h-screen bg-[#0a0a0a] pb-12">
         <div className="page-header">
           <div className="max-w-2xl mx-auto">
             <p className="app-name mb-4">FITGUIDE</p>
