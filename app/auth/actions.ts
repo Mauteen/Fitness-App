@@ -42,7 +42,7 @@ export async function signUp(formData: FormData) {
       return { error: error.message };
     }
 
-    redirect("/");
+    redirect("/welcome");
   } catch (err: unknown) {
     if (err instanceof Error && err.message === "NEXT_REDIRECT") throw err;
     const msg = err instanceof Error ? err.message : "Sign up failed. Please try again.";
