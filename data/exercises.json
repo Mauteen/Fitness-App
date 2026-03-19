@@ -1,0 +1,230 @@
+[
+  {
+    "id": "push-up",
+    "name": "Push-Up",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 60,
+    "muscle": "Chest, Triceps, Shoulders",
+    "difficulty": "Beginner",
+    "videoId": "IODxDxX7oi4",
+    "instructions": [
+      "Start in a high plank position with hands slightly wider than shoulder-width apart.",
+      "Keep your body in a straight line from head to heels — no sagging hips.",
+      "Lower your chest toward the floor by bending your elbows at a 45° angle.",
+      "Stop just before your chest touches the ground.",
+      "Push through your palms to return to the starting position.",
+      "Breathe in on the way down, breathe out as you push up."
+    ],
+    "tips": "If too hard, drop to your knees. Keep core tight throughout."
+  },
+  {
+    "id": "bench-press",
+    "name": "Bench Press",
+    "sets": 3,
+    "reps": "8-10",
+    "rest": 90,
+    "muscle": "Chest, Triceps, Front Deltoids",
+    "difficulty": "Beginner",
+    "videoId": "rT7DgCr-3pg",
+    "instructions": [
+      "Lie flat on the bench with your feet firmly on the floor.",
+      "Grip the bar slightly wider than shoulder-width with an overhand grip.",
+      "Unrack the bar and hold it directly above your chest, arms fully extended.",
+      "Lower the bar slowly to your mid-chest, keeping elbows at ~75° from your body.",
+      "Pause briefly when the bar touches your chest.",
+      "Press the bar back up explosively to the starting position."
+    ],
+    "tips": "Always use a spotter for heavy weights. Keep your back flat — avoid excessive arching."
+  },
+  {
+    "id": "dumbbell-row",
+    "name": "Dumbbell Row",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 60,
+    "muscle": "Back, Biceps, Rear Deltoids",
+    "difficulty": "Beginner",
+    "videoId": "roCP3j6WD4c",
+    "instructions": [
+      "Place one knee and hand on a bench for support, holding a dumbbell in the opposite hand.",
+      "Let the dumbbell hang straight down with arm fully extended.",
+      "Pull the dumbbell up toward your hip by driving your elbow toward the ceiling.",
+      "Squeeze your back muscles at the top of the movement.",
+      "Lower the dumbbell slowly back to the starting position.",
+      "Complete all reps on one side before switching."
+    ],
+    "tips": "Keep your back flat and parallel to the floor. Don't rotate your torso."
+  },
+  {
+    "id": "lat-pulldown",
+    "name": "Lat Pulldown",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 60,
+    "muscle": "Lats, Biceps, Upper Back",
+    "difficulty": "Beginner",
+    "videoId": "CAwf7n6Luuc",
+    "instructions": [
+      "Sit at the lat pulldown machine and secure your thighs under the pad.",
+      "Grip the bar wider than shoulder-width with an overhand grip.",
+      "Lean back slightly — about 30° — to create a natural pulling angle.",
+      "Pull the bar down to your upper chest by driving your elbows down and back.",
+      "Squeeze your lats at the bottom of the movement.",
+      "Slowly return the bar to the starting position with arms fully extended."
+    ],
+    "tips": "Avoid pulling the bar behind your neck. Focus on using your back, not your arms."
+  },
+  {
+    "id": "squat",
+    "name": "Barbell Squat",
+    "sets": 4,
+    "reps": "8-10",
+    "rest": 120,
+    "muscle": "Quads, Hamstrings, Glutes, Core",
+    "difficulty": "Beginner",
+    "videoId": "ultWZbUMPL8",
+    "instructions": [
+      "Stand with feet shoulder-width apart, toes pointed slightly outward.",
+      "Place the barbell on your upper traps (high bar) or rear deltoids (low bar).",
+      "Take a deep breath into your belly and brace your core.",
+      "Push your knees out in line with your toes as you lower down.",
+      "Squat until your thighs are at least parallel to the floor.",
+      "Drive through your heels to stand back up, keeping chest tall."
+    ],
+    "tips": "Start with bodyweight squats to master the form before adding weight."
+  },
+  {
+    "id": "leg-press",
+    "name": "Leg Press",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 90,
+    "muscle": "Quads, Hamstrings, Glutes",
+    "difficulty": "Beginner",
+    "videoId": "IZxyjW7MPJQ",
+    "instructions": [
+      "Sit in the leg press machine with your back flat against the pad.",
+      "Place feet shoulder-width apart on the platform, toes slightly outward.",
+      "Release the safety handles and lower the platform toward your chest.",
+      "Stop when your knees reach about 90° — don't let your lower back lift off.",
+      "Press the platform away by extending your legs, but don't lock out your knees.",
+      "Control the descent on every rep."
+    ],
+    "tips": "Higher foot placement targets glutes more. Lower placement focuses on quads."
+  },
+  {
+    "id": "overhead-press",
+    "name": "Overhead Press",
+    "sets": 3,
+    "reps": "8-10",
+    "rest": 90,
+    "muscle": "Shoulders, Triceps, Upper Chest",
+    "difficulty": "Beginner",
+    "videoId": "2yjwXTZQDDI",
+    "instructions": [
+      "Stand with feet shoulder-width apart, gripping the bar just outside shoulder-width.",
+      "Hold the bar at collarbone height with elbows slightly forward.",
+      "Brace your core and squeeze your glutes before pressing.",
+      "Press the bar straight overhead until arms are fully extended.",
+      "Tuck your chin slightly to allow the bar to pass your face.",
+      "Lower the bar back to the starting position in a controlled manner."
+    ],
+    "tips": "Avoid leaning back excessively. If you need to lean back a lot, the weight is too heavy."
+  },
+  {
+    "id": "dumbbell-lateral-raise",
+    "name": "Lateral Raise",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 45,
+    "muscle": "Side Deltoids",
+    "difficulty": "Beginner",
+    "videoId": "3VcKaXpzqRo",
+    "instructions": [
+      "Stand upright holding a dumbbell in each hand at your sides.",
+      "Keep a slight bend in your elbows throughout the movement.",
+      "Raise both arms out to the sides until they are parallel to the floor.",
+      "Lead with your elbows, not your wrists — imagine pouring water from a jug.",
+      "Pause briefly at the top.",
+      "Lower the dumbbells slowly back to your sides."
+    ],
+    "tips": "Use lighter weight and focus on the burn. Avoid swinging or using momentum."
+  },
+  {
+    "id": "bicep-curl",
+    "name": "Bicep Curl",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 60,
+    "muscle": "Biceps, Forearms",
+    "difficulty": "Beginner",
+    "videoId": "ykJmrZ5v0Oo",
+    "instructions": [
+      "Stand holding a dumbbell in each hand, arms fully extended at your sides.",
+      "Keep your elbows tucked against your torso throughout the movement.",
+      "Curl the dumbbells up toward your shoulders by contracting your biceps.",
+      "Rotate your palms to face your shoulders at the top (supinate).",
+      "Squeeze your biceps hard at the top for 1 second.",
+      "Lower the weights slowly back to the starting position."
+    ],
+    "tips": "Avoid swinging your body. Control the negative (lowering) phase for more gains."
+  },
+  {
+    "id": "tricep-pushdown",
+    "name": "Tricep Pushdown",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 45,
+    "muscle": "Triceps",
+    "difficulty": "Beginner",
+    "videoId": "kiuVA0gs3EI",
+    "instructions": [
+      "Stand at a cable machine with a rope or straight bar attachment at the top.",
+      "Grip the attachment and keep your elbows pinned at your sides.",
+      "Start with your forearms parallel to the floor.",
+      "Push the attachment straight down by extending your elbows fully.",
+      "Squeeze your triceps hard at the bottom.",
+      "Let the weight rise slowly back to the starting position."
+    ],
+    "tips": "Keep your upper arms completely still. Only your forearms should move."
+  },
+  {
+    "id": "plank",
+    "name": "Plank",
+    "sets": 3,
+    "reps": "30-60 sec",
+    "rest": 45,
+    "muscle": "Core, Shoulders, Glutes",
+    "difficulty": "Beginner",
+    "videoId": "ASdvN_XEl_c",
+    "instructions": [
+      "Start in a forearm plank: elbows directly under shoulders, forearms flat.",
+      "Keep your body in a straight line from head to heels.",
+      "Squeeze your glutes and brace your core like you're about to be punched.",
+      "Keep your hips level — don't let them sag or pike up.",
+      "Breathe steadily and hold for the target time.",
+      "Rest and repeat."
+    ],
+    "tips": "Quality over time. A solid 30-second plank beats a sloppy 60-second one."
+  },
+  {
+    "id": "lunge",
+    "name": "Walking Lunge",
+    "sets": 3,
+    "reps": "10 each leg",
+    "rest": 60,
+    "muscle": "Quads, Glutes, Hamstrings, Balance",
+    "difficulty": "Beginner",
+    "videoId": "L8fvwZS77PU",
+    "instructions": [
+      "Stand upright with feet together, hands at your sides or on your hips.",
+      "Step forward with your right foot, taking a long stride.",
+      "Lower your back knee toward the floor — stop just before it touches.",
+      "Your front thigh should be parallel to the floor, knee over ankle.",
+      "Drive off your front heel to bring your back foot forward to meet it.",
+      "Alternate legs with each step forward."
+    ],
+    "tips": "Keep your torso upright throughout. Don't let your front knee cave inward."
+  }
+]
