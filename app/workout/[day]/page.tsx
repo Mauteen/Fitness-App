@@ -18,7 +18,9 @@ export default function WorkoutDayPage({
   const workout = getWorkoutByDay(dayNum);
   const [selectedExercise, setSelectedExercise] = useState<Exercise | null>(null);
   const [todayDay, setTodayDay] = useState<number | null>(null);
-  const { markComplete, isCompletedToday, hydrate } = useProgressStore();
+  const completedDates = useProgressStore(state => state.completedDates);
+  const markComplete = useProgressStore(state => state.markComplete);
+  const hydrate = useProgressStore(state => state.hydrate);
 
   useEffect(() => {
     hydrate();
@@ -26,7 +28,8 @@ export default function WorkoutDayPage({
   }, [hydrate]);
 
   const isToday = todayDay === dayNum;
-  const alreadyDone = isCompletedToday();
+  const todayStr = new Date().toISOString().split("T")[0];
+  const alreadyDone = completedDates.includes(todayStr);
 
   if (!workout) {
     return (

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { getAllWorkouts, getWorkoutByDay, getTodayWorkoutDay, getGreeting, formatShortDate, getWeekDates } from "@/lib/workoutUtils";
 import { WorkoutDay } from "@/lib/types";
+import { useProgressStore } from "@/store/progressStore";
 
 const USER_NAME = "Mauteen";
 
@@ -14,13 +15,20 @@ export default function HomePage() {
   const [weekDates, setWeekDates] = useState<Record<number, Date>>({});
   const allWorkouts = getAllWorkouts();
 
+  const completedDates = useProgressStore(state => state.completedDates);
+  const hydrate = useProgressStore(state => state.hydrate);
+
   useEffect(() => {
     const wd = getWeekDates();
     setTodayDay(getTodayWorkoutDay());
     setGreeting(getGreeting());
     setTodayDate(formatShortDate(new Date()));
     setWeekDates(wd);
-  }, []);
+    hydrate();
+  }, [hydrate]);
+
+  const todayStr = new Date().toISOString().split("T")[0];
+  const isTodayComplete = completedDates.includes(todayStr);
 
   const todayWorkout = getWorkoutByDay(todayDay);
   const isRestDay = todayWorkout?.exerciseIds.length === 0;
@@ -131,6 +139,21 @@ export default function HomePage() {
           box-shadow: 0 6px 24px rgba(34, 197, 94, 0.35);
         }
         .start-btn:active { transform: scale(0.98); }
+        .completed-badge {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-family: 'DM Sans', sans-serif;
+          font-weight: 700;
+          font-size: 0.8rem;
+          letter-spacing: 0.05em;
+          color: #22c55e;
+          background: #22c55e14;
+          border: 1px solid #22c55e44;
+          padding: 0.6rem 1rem;
+          border-radius: 12px;
+          flex-shrink: 0;
+        }
         .exercise-count-chip {
           font-size: 0.75rem;
           color: #666;
@@ -260,12 +283,21 @@ export default function HomePage() {
                     </p>
                   </div>
                   {!isRestDay && (
-                    <Link href={`/workout/${todayDay}`} className="start-btn">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                        <polygon points="5,3 19,12 5,21"/>
-                      </svg>
-                      Start
-                    </Link>
+                    isTodayComplete ? (
+                      <div className="completed-badge">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                          <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Done
+                      </div>
+                    ) : (
+                      <Link href={`/workout/${todayDay}`} className="start-btn">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                          <polygon points="5,3 19,12 5,21"/>
+                        </svg>
+                        Start
+                      </Link>
+                    )
                   )}
                 </div>
               </div>
