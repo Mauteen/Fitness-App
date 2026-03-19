@@ -2,24 +2,43 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { signIn } from "@/app/auth/actions";
+import { useRouter } from "next/navigation";
+import { createClient } from "@/lib/supabase/client";
 
 export default function LoginPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [rememberMe, setRememberMe] = useState(false);
+  const router = useRouter();
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setError("");
     setLoading(true);
+
     const formData = new FormData(e.currentTarget);
+    const email = formData.get("email") as string;
+    const password = formData.get("password") as string;
+
     try {
-      const result = await signIn(formData);
-      if (result?.error) {
-        setError(result.error);
+      const supabase = createClient();
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+
+      if (error) {
+        setError(error.message);
         setLoading(false);
+        return;
       }
-      // On success, signIn calls redirect("/") — page navigates away, no need to reset loading
+
+      // Track "remember me" preference
+      if (rememberMe) {
+        localStorage.removeItem("fitguide_no_persist");
+      } else {
+        localStorage.setItem("fitguide_no_persist", "1");
+        sessionStorage.setItem("fitguide_session", "1");
+      }
+
+      router.push("/");
     } catch {
       setError("Something went wrong. Please try again.");
       setLoading(false);
@@ -96,6 +115,27 @@ export default function LoginPage() {
         }
         .field input:focus { border-color: #22c55e44; }
         .field input::placeholder { color: #333; }
+        .remember-row {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin-bottom: 0.75rem;
+          margin-top: -0.25rem;
+        }
+        .remember-row input[type="checkbox"] {
+          width: 16px;
+          height: 16px;
+          accent-color: #22c55e;
+          cursor: pointer;
+          flex-shrink: 0;
+        }
+        .remember-row label {
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.82rem;
+          color: #555;
+          cursor: pointer;
+          user-select: none;
+        }
         .submit-btn {
           width: 100%;
           background: #22c55e;
@@ -173,6 +213,15 @@ export default function LoginPage() {
                 required
                 autoComplete="current-password"
               />
+            </div>
+            <div className="remember-row">
+              <input
+                type="checkbox"
+                id="rememberMe"
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+              />
+              <label htmlFor="rememberMe">Remember me</label>
             </div>
             <button type="submit" className="submit-btn" disabled={loading}>
               {loading ? "Signing in…" : "Sign In"}

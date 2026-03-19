@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import BottomNav from "@/components/BottomNav";
+import SessionGuard from "@/components/SessionGuard";
 
 export const metadata: Metadata = {
   title: "FitGuide — Your Daily Workout",
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className="min-h-full bg-[#0a0a0a]">
+        <SessionGuard />
         {children}
         <BottomNav />
       </body>
