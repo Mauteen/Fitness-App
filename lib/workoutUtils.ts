@@ -84,3 +84,24 @@ export function formatRest(seconds: number): string {
   const secs = seconds % 60;
   return secs > 0 ? `${mins}m ${secs}s` : `${mins}m`;
 }
+
+export function getExerciseCategory(exercise: Exercise): string {
+  const muscle = exercise.muscle.toLowerCase();
+  const keywords: [string, string][] = [
+    ["chest",     "Chest"],
+    ["lats",      "Back"],
+    ["back",      "Back"],
+    ["quad",      "Legs"],
+    ["hamstring", "Legs"],
+    ["shoulder",  "Shoulders"],
+    ["deltoid",   "Shoulders"],
+    ["bicep",     "Arms"],
+    ["tricep",    "Arms"],
+    ["core",      "Core"],
+    ["abs",       "Core"],
+  ];
+  for (const [kw, cat] of keywords) {
+    if (muscle.includes(kw)) return cat;
+  }
+  return "Other";
+}

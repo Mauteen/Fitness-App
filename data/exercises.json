@@ -38,6 +38,158 @@
     "tips": "Always use a spotter for heavy weights. Keep your back flat — avoid excessive arching."
   },
   {
+    "id": "incline-bench-press",
+    "name": "Incline Bench Press",
+    "sets": 3,
+    "reps": "8-10",
+    "rest": 90,
+    "muscle": "Upper Chest, Triceps, Front Deltoids",
+    "difficulty": "Intermediate",
+    "videoId": "8iPEnn-ltC8",
+    "instructions": [
+      "Set the bench to a 30–45° incline and sit back with feet flat on the floor.",
+      "Grip the barbell slightly wider than shoulder-width.",
+      "Unrack and hold the bar above your upper chest.",
+      "Lower the bar slowly to your upper chest, keeping elbows at about 75°.",
+      "Pause briefly at the bottom, then press back up powerfully.",
+      "Maintain a neutral wrist position throughout."
+    ],
+    "tips": "A 30° angle targets the upper chest best. Too steep and it becomes more of a shoulder press."
+  },
+  {
+    "id": "decline-bench-press",
+    "name": "Decline Bench Press",
+    "sets": 3,
+    "reps": "8-10",
+    "rest": 90,
+    "muscle": "Lower Chest, Triceps",
+    "difficulty": "Intermediate",
+    "videoId": "LfyQTbMUKpg",
+    "instructions": [
+      "Set the bench to a 15–30° decline and secure your legs under the pad.",
+      "Grip the barbell slightly wider than shoulder-width.",
+      "Unrack and hold the bar above your lower chest.",
+      "Lower the bar to your lower chest in a controlled arc.",
+      "Press back up explosively to the starting position.",
+      "Re-rack carefully with a spotter's help."
+    ],
+    "tips": "Use a spotter — the decline position makes it harder to bail safely."
+  },
+  {
+    "id": "incline-dumbbell-press",
+    "name": "Incline Dumbbell Press",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 75,
+    "muscle": "Upper Chest, Triceps, Shoulders",
+    "difficulty": "Beginner",
+    "videoId": "8iPEnn-ltC8",
+    "instructions": [
+      "Set bench to 30–45° incline, sit with a dumbbell in each hand on your thighs.",
+      "Kick the dumbbells up to shoulder level as you lie back.",
+      "Hold the dumbbells at chest level with palms facing forward.",
+      "Press both dumbbells upward until arms are fully extended.",
+      "Lower them slowly to the starting position.",
+      "Keep a slight bend in your elbows at the top — don't lock out."
+    ],
+    "tips": "Dumbbells allow a greater range of motion than a barbell. Focus on squeezing at the top."
+  },
+  {
+    "id": "dumbbell-flye",
+    "name": "Dumbbell Flye",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 60,
+    "muscle": "Chest, Front Deltoids",
+    "difficulty": "Beginner",
+    "videoId": "eozdVDA78K0",
+    "instructions": [
+      "Lie flat on a bench holding a dumbbell in each hand above your chest, palms facing each other.",
+      "Keep a slight, fixed bend in your elbows throughout the movement.",
+      "Lower the dumbbells out to the sides in a wide arc until you feel a deep chest stretch.",
+      "Stop when your elbows are at shoulder level.",
+      "Squeeze your chest and bring the dumbbells back up to the starting position.",
+      "Imagine hugging a large tree trunk."
+    ],
+    "tips": "This is an isolation move — keep the weight light and focus on the stretch and squeeze."
+  },
+  {
+    "id": "cable-crossover",
+    "name": "Cable Crossover",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 60,
+    "muscle": "Chest, Front Deltoids",
+    "difficulty": "Intermediate",
+    "videoId": "taI4XduLpTk",
+    "instructions": [
+      "Set both cable pulleys to the high position and stand in the center.",
+      "Grab one handle in each hand and step forward with one foot for balance.",
+      "Start with arms extended to the sides at shoulder height, slight elbow bend.",
+      "Pull the handles down and together in a wide arc, crossing them at your midline.",
+      "Squeeze your chest hard at the bottom for 1–2 seconds.",
+      "Slowly return to the starting position with control."
+    ],
+    "tips": "You can adjust pulley height to target upper, mid, or lower chest. Avoid using momentum."
+  },
+  {
+    "id": "chest-dip",
+    "name": "Chest Dip",
+    "sets": 3,
+    "reps": "8-12",
+    "rest": 75,
+    "muscle": "Lower Chest, Triceps, Shoulders",
+    "difficulty": "Intermediate",
+    "videoId": "2z8JmcrW-As",
+    "instructions": [
+      "Grip the parallel bars and support your body with arms fully extended.",
+      "Lean your torso forward at about 30° to emphasize the chest.",
+      "Lower your body by bending your elbows until your upper arms are parallel to the floor.",
+      "You should feel a deep stretch through your chest at the bottom.",
+      "Press back up by extending your elbows, maintaining the forward lean.",
+      "Avoid locking out elbows at the top."
+    ],
+    "tips": "Stay leaning forward throughout. Upright posture shifts the work to triceps instead."
+  },
+  {
+    "id": "pec-deck",
+    "name": "Pec Deck Machine",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 60,
+    "muscle": "Chest, Front Deltoids",
+    "difficulty": "Beginner",
+    "videoId": "Z57CtFmRMxA",
+    "instructions": [
+      "Sit on the machine with your back flat against the pad.",
+      "Place your forearms on the pads (or grip the handles) at chest height.",
+      "Keep a slight bend in your elbows throughout.",
+      "Bring both arms together in a wide arc, squeezing your chest at the center.",
+      "Hold the contraction for 1 second.",
+      "Slowly return to the starting position with full control."
+    ],
+    "tips": "Great for beginners and as a finishing exercise. Focus on the mind-muscle connection."
+  },
+  {
+    "id": "close-grip-push-up",
+    "name": "Diamond Push-Up",
+    "sets": 3,
+    "reps": "10-15",
+    "rest": 60,
+    "muscle": "Triceps, Inner Chest",
+    "difficulty": "Intermediate",
+    "videoId": "J0DXBSpghaE",
+    "instructions": [
+      "Get into a push-up position and bring your hands together under your chest.",
+      "Form a diamond shape with your thumbs and index fingers.",
+      "Keep your elbows close to your torso throughout.",
+      "Lower your chest toward your hands, keeping your body rigid.",
+      "Push back up until arms are fully extended.",
+      "Keep core tight and hips level throughout."
+    ],
+    "tips": "One of the best bodyweight moves for triceps. If too hard, elevate your hands on a bench."
+  },
+  {
     "id": "dumbbell-row",
     "name": "Dumbbell Row",
     "sets": 3,
@@ -74,6 +226,177 @@
       "Slowly return the bar to the starting position with arms fully extended."
     ],
     "tips": "Avoid pulling the bar behind your neck. Focus on using your back, not your arms."
+  },
+  {
+    "id": "pull-up",
+    "name": "Pull-Up",
+    "sets": 3,
+    "reps": "6-10",
+    "rest": 90,
+    "muscle": "Lats, Biceps, Upper Back",
+    "difficulty": "Intermediate",
+    "videoId": "eGo4IYlbE5g",
+    "instructions": [
+      "Hang from a pull-up bar with hands shoulder-width apart, overhand grip.",
+      "Engage your core and squeeze your shoulder blades down and back.",
+      "Pull your chest toward the bar by driving your elbows down.",
+      "Continue until your chin clears the bar.",
+      "Pause briefly at the top.",
+      "Lower yourself slowly to a full hang — don't rush the negative."
+    ],
+    "tips": "The pull-up is one of the best upper body exercises. Use a band for assistance until you build strength."
+  },
+  {
+    "id": "chin-up",
+    "name": "Chin-Up",
+    "sets": 3,
+    "reps": "6-10",
+    "rest": 90,
+    "muscle": "Lats, Biceps, Upper Back",
+    "difficulty": "Intermediate",
+    "videoId": "52KqDGzvEqM",
+    "instructions": [
+      "Hang from a bar with hands shoulder-width apart, palms facing toward you (supinated grip).",
+      "Engage your core and pull your shoulder blades down.",
+      "Drive your elbows toward your hips to pull yourself up.",
+      "Continue until your chin passes the bar.",
+      "Hold briefly at the top, squeezing your biceps and back.",
+      "Lower yourself slowly and with control."
+    ],
+    "tips": "The underhand grip recruits more biceps compared to a standard pull-up. Great for arm size too."
+  },
+  {
+    "id": "deadlift",
+    "name": "Deadlift",
+    "sets": 4,
+    "reps": "5-6",
+    "rest": 180,
+    "muscle": "Back, Hamstrings, Glutes, Core, Traps",
+    "difficulty": "Intermediate",
+    "videoId": "op9kVnSso6Q",
+    "instructions": [
+      "Stand with the bar over your mid-foot, feet hip-width apart.",
+      "Hinge at the hips and grip the bar just outside your legs (double overhand).",
+      "Drop your hips, lift your chest, and create a flat (neutral) spine.",
+      "Take a big breath, brace your core hard, and push the floor away.",
+      "Keep the bar dragging up your shins and thighs.",
+      "Lock out at the top by squeezing your glutes — then hinge back down to reset."
+    ],
+    "tips": "The king of all exercises. Start light and nail the form. Never round your lower back."
+  },
+  {
+    "id": "bent-over-row",
+    "name": "Bent-Over Barbell Row",
+    "sets": 4,
+    "reps": "8-10",
+    "rest": 90,
+    "muscle": "Back, Lats, Biceps, Rear Deltoids",
+    "difficulty": "Intermediate",
+    "videoId": "FWJR5Ve8bnQ",
+    "instructions": [
+      "Stand with feet hip-width apart, holding a barbell with an overhand grip.",
+      "Hinge forward until your torso is nearly parallel to the floor.",
+      "Let the bar hang at arm's length, keeping your back flat.",
+      "Pull the bar up to your lower chest/upper abdomen by driving your elbows back.",
+      "Squeeze your shoulder blades together at the top.",
+      "Lower the bar slowly to the starting position."
+    ],
+    "tips": "Keep your back neutral and core braced throughout. Avoid jerking the weight up."
+  },
+  {
+    "id": "seated-cable-row",
+    "name": "Seated Cable Row",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 75,
+    "muscle": "Back, Lats, Biceps, Rear Deltoids",
+    "difficulty": "Beginner",
+    "videoId": "GZbfZ033f74",
+    "instructions": [
+      "Sit at the cable row machine with feet flat on the footpads.",
+      "Grip the handle (V-bar or wide bar) and sit upright with a slight lean back.",
+      "Pull the handle toward your lower chest/upper abdomen.",
+      "Drive your elbows back and squeeze your shoulder blades at the end.",
+      "Hold the contraction for 1 second.",
+      "Slowly extend your arms and let your shoulder blades protract before the next rep."
+    ],
+    "tips": "Don't use body momentum to pull. Sit tall throughout and let the back do the work."
+  },
+  {
+    "id": "t-bar-row",
+    "name": "T-Bar Row",
+    "sets": 3,
+    "reps": "8-10",
+    "rest": 90,
+    "muscle": "Back, Lats, Biceps, Rear Deltoids",
+    "difficulty": "Intermediate",
+    "videoId": "j3Cn9s4uyGY",
+    "instructions": [
+      "Stand over the T-bar machine, feet shoulder-width apart, straddling the bar.",
+      "Hinge forward at the hips, keeping your back flat and parallel to the floor.",
+      "Grip the handles and let the weight hang at arm's length.",
+      "Pull the weight up toward your chest by driving your elbows back.",
+      "Squeeze your back muscles hard at the top.",
+      "Lower the weight slowly with full control."
+    ],
+    "tips": "Great for building thickness in the mid-back. Keep chest up and avoid rounding."
+  },
+  {
+    "id": "face-pull",
+    "name": "Face Pull",
+    "sets": 3,
+    "reps": "15-20",
+    "rest": 45,
+    "muscle": "Rear Deltoids, Upper Back, Rotator Cuff",
+    "difficulty": "Beginner",
+    "videoId": "rep-qVOkqgk",
+    "instructions": [
+      "Set a cable machine to upper-chest height with a rope attachment.",
+      "Grip the rope with both hands, palms facing each other, thumbs up.",
+      "Step back until your arms are fully extended toward the cable.",
+      "Pull the rope toward your face, flaring your elbows out and up.",
+      "Externally rotate your shoulders so your hands end up beside your ears.",
+      "Pause briefly, then return slowly to the start."
+    ],
+    "tips": "One of the most important shoulder health exercises. Everyone should do these regularly."
+  },
+  {
+    "id": "hyperextension",
+    "name": "Hyperextension (Back Extension)",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 60,
+    "muscle": "Lower Back, Glutes, Hamstrings",
+    "difficulty": "Beginner",
+    "videoId": "ph3pddpKzzw",
+    "instructions": [
+      "Position yourself in the hyperextension machine with hips on the pad and feet secured.",
+      "Cross your arms over your chest or hold a weight plate to your chest.",
+      "Start with your torso hanging down toward the floor.",
+      "Raise your upper body by extending your hips until your body forms a straight line.",
+      "Squeeze your glutes and lower back at the top.",
+      "Lower slowly and repeat."
+    ],
+    "tips": "Don't hyperextend past a straight line — it places excessive stress on your lumbar spine."
+  },
+  {
+    "id": "straight-arm-pulldown",
+    "name": "Straight-Arm Pulldown",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 60,
+    "muscle": "Lats, Core",
+    "difficulty": "Beginner",
+    "videoId": "4_DnHPwMDiM",
+    "instructions": [
+      "Stand facing a high cable pulley with a straight bar or rope attachment.",
+      "Grip the bar slightly wider than shoulder-width, arms extended in front.",
+      "Hinge slightly at the hips and keep a slight bend in your elbows.",
+      "Pull the bar down in an arc to your thighs by squeezing your lats.",
+      "Keep your arms straight — this is purely a lat movement.",
+      "Slowly return the bar to the starting position."
+    ],
+    "tips": "Focus on initiating the movement with your lats, not your arms or shoulders."
   },
   {
     "id": "squat",
@@ -114,6 +437,196 @@
     "tips": "Higher foot placement targets glutes more. Lower placement focuses on quads."
   },
   {
+    "id": "lunge",
+    "name": "Walking Lunge",
+    "sets": 3,
+    "reps": "10 each leg",
+    "rest": 60,
+    "muscle": "Quads, Glutes, Hamstrings, Balance",
+    "difficulty": "Beginner",
+    "videoId": "L8fvwZS77PU",
+    "instructions": [
+      "Stand upright with feet together, hands at your sides or on your hips.",
+      "Step forward with your right foot, taking a long stride.",
+      "Lower your back knee toward the floor — stop just before it touches.",
+      "Your front thigh should be parallel to the floor, knee over ankle.",
+      "Drive off your front heel to bring your back foot forward to meet it.",
+      "Alternate legs with each step forward."
+    ],
+    "tips": "Keep your torso upright throughout. Don't let your front knee cave inward."
+  },
+  {
+    "id": "romanian-deadlift",
+    "name": "Romanian Deadlift",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 90,
+    "muscle": "Hamstrings, Glutes, Lower Back",
+    "difficulty": "Intermediate",
+    "videoId": "JCXUYuzwNrM",
+    "instructions": [
+      "Stand holding a barbell (or dumbbells) at hip level, feet hip-width apart.",
+      "Keep a soft bend in your knees — they should not move much.",
+      "Hinge at the hips and lower the bar down your legs, pushing your hips back.",
+      "Keep the bar close to your body throughout.",
+      "Lower until you feel a strong stretch in your hamstrings (about mid-shin).",
+      "Drive your hips forward to return to the starting position."
+    ],
+    "tips": "This is a hip hinge, not a squat. The movement comes from your hips, not your knees."
+  },
+  {
+    "id": "leg-curl",
+    "name": "Leg Curl (Lying)",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 60,
+    "muscle": "Hamstrings",
+    "difficulty": "Beginner",
+    "videoId": "1Tq3QdYUuHs",
+    "instructions": [
+      "Lie face down on the leg curl machine with your ankles under the pad.",
+      "Keep your hips flat on the bench throughout the movement.",
+      "Curl your heels up toward your glutes as far as possible.",
+      "Squeeze your hamstrings hard at the top.",
+      "Lower slowly back to the starting position.",
+      "Avoid raising your hips off the pad."
+    ],
+    "tips": "Control the lowering phase — that's where much of the hamstring growth happens."
+  },
+  {
+    "id": "leg-extension",
+    "name": "Leg Extension",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 60,
+    "muscle": "Quads",
+    "difficulty": "Beginner",
+    "videoId": "YyvSfVjQeL0",
+    "instructions": [
+      "Sit in the leg extension machine with your back flat against the pad.",
+      "Position the ankle pad just above your feet.",
+      "Extend your legs upward by contracting your quads until fully straight.",
+      "Hold at the top for 1 second, squeezing your quads.",
+      "Lower slowly with control — don't let the weight drop.",
+      "Repeat for the target reps."
+    ],
+    "tips": "Best used as an isolation finisher after compound leg work. Avoid locking knees aggressively."
+  },
+  {
+    "id": "bulgarian-split-squat",
+    "name": "Bulgarian Split Squat",
+    "sets": 3,
+    "reps": "8-10 each leg",
+    "rest": 90,
+    "muscle": "Quads, Glutes, Hamstrings",
+    "difficulty": "Intermediate",
+    "videoId": "2C-uNgKwPLE",
+    "instructions": [
+      "Stand facing away from a bench. Reach back and rest one foot on the bench.",
+      "Hop your front foot forward so your torso stays upright when you squat down.",
+      "Lower your back knee toward the floor by bending your front knee.",
+      "Keep your front knee tracking over your toes.",
+      "Drive through your front heel to return to the starting position.",
+      "Complete all reps on one leg before switching."
+    ],
+    "tips": "One of the most effective single-leg exercises. Dumbbells or bodyweight both work well."
+  },
+  {
+    "id": "goblet-squat",
+    "name": "Goblet Squat",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 60,
+    "muscle": "Quads, Glutes, Core",
+    "difficulty": "Beginner",
+    "videoId": "MeIiIdhvXT4",
+    "instructions": [
+      "Hold a dumbbell or kettlebell vertically at your chest with both hands.",
+      "Stand with feet slightly wider than shoulder-width, toes pointed out 30–45°.",
+      "Brace your core and sit down into a deep squat, keeping your chest tall.",
+      "Use your elbows to push your knees out at the bottom.",
+      "Drive through your heels to stand back up.",
+      "The weight acts as a counterbalance — great for squat depth."
+    ],
+    "tips": "Perfect for beginners learning to squat. Great warm-up for any leg day."
+  },
+  {
+    "id": "sumo-squat",
+    "name": "Sumo Squat",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 75,
+    "muscle": "Inner Quads, Glutes, Adductors",
+    "difficulty": "Beginner",
+    "videoId": "lLBkHbXOiCI",
+    "instructions": [
+      "Stand with feet wider than shoulder-width and toes turned out significantly.",
+      "Hold a dumbbell or kettlebell in both hands hanging between your legs.",
+      "Brace your core and sit down between your feet.",
+      "Keep your chest tall and knees tracking over your toes.",
+      "Squat until thighs are parallel (or lower if mobility allows).",
+      "Drive through your heels to return to the starting position."
+    ],
+    "tips": "The wide stance shifts emphasis to the inner thighs and glutes compared to a regular squat."
+  },
+  {
+    "id": "hip-thrust",
+    "name": "Hip Thrust",
+    "sets": 4,
+    "reps": "10-15",
+    "rest": 90,
+    "muscle": "Glutes, Hamstrings",
+    "difficulty": "Beginner",
+    "videoId": "SEdqd1n0cvg",
+    "instructions": [
+      "Sit on the floor with your upper back against a bench and a barbell over your hips.",
+      "Bend your knees so feet are flat on the floor, shoulder-width apart.",
+      "Roll the bar into position over your hip crease and use a pad for comfort.",
+      "Drive through your heels to thrust your hips up until your body is parallel to the floor.",
+      "Squeeze your glutes hard at the top — your shins should be vertical.",
+      "Lower your hips back down slowly and repeat."
+    ],
+    "tips": "The single best exercise for glute development. Focus on squeezing at the top, not just lifting."
+  },
+  {
+    "id": "calf-raise",
+    "name": "Standing Calf Raise",
+    "sets": 4,
+    "reps": "15-20",
+    "rest": 45,
+    "muscle": "Calves (Gastrocnemius, Soleus)",
+    "difficulty": "Beginner",
+    "videoId": "gwLzBJYoWlA",
+    "instructions": [
+      "Stand on the edge of a step or calf raise platform with heels hanging off.",
+      "Hold dumbbells at your sides or use a machine for resistance.",
+      "Start with heels below the platform level for a full stretch.",
+      "Rise up onto your tiptoes as high as possible.",
+      "Hold the top position for 1 second.",
+      "Lower slowly to the stretch position and repeat."
+    ],
+    "tips": "Calves respond well to high reps and slow tempos. Don't rush through these."
+  },
+  {
+    "id": "step-up",
+    "name": "Step-Up",
+    "sets": 3,
+    "reps": "10-12 each leg",
+    "rest": 60,
+    "muscle": "Quads, Glutes, Hamstrings",
+    "difficulty": "Beginner",
+    "videoId": "WCFCdxzFBa4",
+    "instructions": [
+      "Stand facing a sturdy bench or box holding dumbbells at your sides.",
+      "Step up with your right foot, pressing through your heel to lift your body up.",
+      "Bring your left foot up to meet it on the box.",
+      "Step back down with your right foot, then the left.",
+      "Alternate the leading leg each rep, or complete all reps on one side.",
+      "Keep your torso upright throughout."
+    ],
+    "tips": "Use a knee-height box for best results. Great for building functional leg strength."
+  },
+  {
     "id": "overhead-press",
     "name": "Overhead Press",
     "sets": 3,
@@ -152,8 +665,122 @@
     "tips": "Use lighter weight and focus on the burn. Avoid swinging or using momentum."
   },
   {
+    "id": "arnold-press",
+    "name": "Arnold Press",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 75,
+    "muscle": "Shoulders, Triceps, Upper Chest",
+    "difficulty": "Intermediate",
+    "videoId": "6Z15_WdXmVw",
+    "instructions": [
+      "Sit on a bench with a dumbbell in each hand at shoulder height, palms facing you.",
+      "Press the dumbbells up while rotating your palms forward.",
+      "Fully extend your arms overhead — palms now facing away from you.",
+      "Reverse the motion: lower the dumbbells while rotating palms back toward you.",
+      "Return to the starting position with palms facing you.",
+      "The rotation hits all three deltoid heads in one movement."
+    ],
+    "tips": "Named after Arnold Schwarzenegger. Go slow and controlled to feel the full range."
+  },
+  {
+    "id": "dumbbell-front-raise",
+    "name": "Front Raise",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 45,
+    "muscle": "Front Deltoids, Upper Chest",
+    "difficulty": "Beginner",
+    "videoId": "hRJ6tR5-if0",
+    "instructions": [
+      "Stand holding a dumbbell in each hand in front of your thighs, palms facing you.",
+      "Keep a slight bend in your elbows throughout.",
+      "Raise one (or both) arms straight in front of you to shoulder height.",
+      "Hold briefly at the top.",
+      "Lower slowly back to the starting position.",
+      "Alternate arms or do both simultaneously."
+    ],
+    "tips": "Avoid leaning back or using body momentum. Keep the movement strict."
+  },
+  {
+    "id": "rear-delt-fly",
+    "name": "Rear Delt Fly",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 45,
+    "muscle": "Rear Deltoids, Upper Back",
+    "difficulty": "Beginner",
+    "videoId": "EA7u4Q_8HQ0",
+    "instructions": [
+      "Sit on the edge of a bench and hinge forward until your chest is near your thighs.",
+      "Hold a dumbbell in each hand hanging below your body, palms facing each other.",
+      "Raise both arms out to the sides in a wide arc, keeping a slight elbow bend.",
+      "Squeeze your rear delts and upper back at the top.",
+      "Lower the dumbbells slowly back to the starting position.",
+      "You can also do this on a pec deck machine in reverse."
+    ],
+    "tips": "These are commonly underdeveloped. Strong rear delts improve posture and shoulder health."
+  },
+  {
+    "id": "upright-row",
+    "name": "Upright Row",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 60,
+    "muscle": "Side Deltoids, Traps, Biceps",
+    "difficulty": "Beginner",
+    "videoId": "VuSHVsABVos",
+    "instructions": [
+      "Stand holding a barbell or dumbbells in front of your thighs, overhand grip.",
+      "Pull the weight straight up along your body, leading with your elbows.",
+      "Raise until the bar is at chin level and elbows are above your hands.",
+      "Your elbows should flare outward and be above your wrists at the top.",
+      "Hold briefly, then lower slowly.",
+      "Keep the bar close to your body throughout."
+    ],
+    "tips": "Use a wider grip to reduce shoulder impingement risk. Stop at chest height if you feel discomfort."
+  },
+  {
+    "id": "cable-lateral-raise",
+    "name": "Cable Lateral Raise",
+    "sets": 3,
+    "reps": "15-20",
+    "rest": 45,
+    "muscle": "Side Deltoids",
+    "difficulty": "Beginner",
+    "videoId": "PPdLZdBnNGI",
+    "instructions": [
+      "Stand sideways to a cable machine with the pulley set to the lowest position.",
+      "Grab the handle with the hand furthest from the machine.",
+      "Keep a slight bend in your elbow.",
+      "Raise your arm out to the side until it's parallel to the floor.",
+      "Hold briefly at the top, then lower slowly.",
+      "The cable provides constant tension throughout — unlike dumbbells."
+    ],
+    "tips": "The cable keeps tension at the bottom of the movement where dumbbells lack it. Great for shoulder isolation."
+  },
+  {
+    "id": "machine-shoulder-press",
+    "name": "Machine Shoulder Press",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 75,
+    "muscle": "Shoulders, Triceps",
+    "difficulty": "Beginner",
+    "videoId": "Wqnal9657oU",
+    "instructions": [
+      "Adjust the seat so the handles are at shoulder height.",
+      "Sit with your back flat against the pad and grab the handles.",
+      "Press the handles straight overhead until arms are nearly fully extended.",
+      "Hold briefly at the top.",
+      "Lower the handles slowly back to shoulder height.",
+      "Keep core braced and avoid arching your back."
+    ],
+    "tips": "Great for beginners or when you want to go heavy without balancing the weight yourself."
+  },
+  {
     "id": "bicep-curl",
-    "name": "Bicep Curl",
+    "name": "Dumbbell Bicep Curl",
     "sets": 3,
     "reps": "10-12",
     "rest": 60,
@@ -169,6 +796,120 @@
       "Lower the weights slowly back to the starting position."
     ],
     "tips": "Avoid swinging your body. Control the negative (lowering) phase for more gains."
+  },
+  {
+    "id": "barbell-curl",
+    "name": "Barbell Curl",
+    "sets": 3,
+    "reps": "8-10",
+    "rest": 75,
+    "muscle": "Biceps, Forearms",
+    "difficulty": "Beginner",
+    "videoId": "kwG2ipFRgfo",
+    "instructions": [
+      "Stand holding a barbell with an underhand grip, hands shoulder-width apart.",
+      "Let the bar hang at arm's length in front of your thighs.",
+      "Keep your elbows pinned at your sides and curl the bar up toward your shoulders.",
+      "Squeeze your biceps at the top — the bar should be near your chin.",
+      "Lower the bar slowly in a controlled arc.",
+      "Keep your upper arms completely still throughout."
+    ],
+    "tips": "The barbell allows heavier loads than dumbbells. Use an EZ-bar if you have wrist discomfort."
+  },
+  {
+    "id": "hammer-curl",
+    "name": "Hammer Curl",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 60,
+    "muscle": "Biceps, Brachialis, Forearms",
+    "difficulty": "Beginner",
+    "videoId": "zC3nLlEvin4",
+    "instructions": [
+      "Stand holding a dumbbell in each hand with a neutral grip (palms facing each other).",
+      "Keep your elbows tucked at your sides throughout.",
+      "Curl the dumbbells up toward your shoulders without rotating your wrists.",
+      "Hold briefly at the top.",
+      "Lower slowly back to the starting position.",
+      "Alternate arms or curl both simultaneously."
+    ],
+    "tips": "Hammer curls target the brachialis — a muscle that pushes your biceps up for a bigger peak."
+  },
+  {
+    "id": "concentration-curl",
+    "name": "Concentration Curl",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 60,
+    "muscle": "Biceps",
+    "difficulty": "Beginner",
+    "videoId": "0AUGkch3tzc",
+    "instructions": [
+      "Sit on a bench with legs spread and lean forward slightly.",
+      "Hold a dumbbell in one hand and rest the back of your upper arm against your inner thigh.",
+      "Let the dumbbell hang down with arm fully extended.",
+      "Curl the dumbbell up toward your shoulder, rotating your palm up.",
+      "Squeeze your bicep hard at the top.",
+      "Lower slowly, completing all reps before switching arms."
+    ],
+    "tips": "The braced position eliminates cheating and maximizes bicep isolation. Go slow for best results."
+  },
+  {
+    "id": "preacher-curl",
+    "name": "Preacher Curl",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 60,
+    "muscle": "Biceps (lower portion)",
+    "difficulty": "Beginner",
+    "videoId": "fIWP-FRFNU0",
+    "instructions": [
+      "Sit at a preacher curl bench and rest your upper arms on the pad.",
+      "Hold a barbell or dumbbells with an underhand grip.",
+      "Let your arms extend fully at the start.",
+      "Curl the weight up toward your chin by contracting your biceps.",
+      "Squeeze at the top, then lower slowly — going all the way back to full extension.",
+      "Avoid bouncing at the bottom."
+    ],
+    "tips": "The preacher bench targets the lower portion of the biceps. Great for adding fullness."
+  },
+  {
+    "id": "incline-dumbbell-curl",
+    "name": "Incline Dumbbell Curl",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 60,
+    "muscle": "Biceps (long head)",
+    "difficulty": "Intermediate",
+    "videoId": "soxrZlIl35U",
+    "instructions": [
+      "Set a bench to 60° incline and sit back with a dumbbell in each hand.",
+      "Let your arms hang straight down — the incline creates a stretch on the long head of the bicep.",
+      "Curl both dumbbells up toward your shoulders while keeping your upper arms stationary.",
+      "Squeeze at the top.",
+      "Lower slowly to the fully extended, stretched position.",
+      "Avoid swinging your arms forward."
+    ],
+    "tips": "The stretch at the bottom is the key advantage of this exercise. Don't rush the lowering phase."
+  },
+  {
+    "id": "cable-curl",
+    "name": "Cable Curl",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 60,
+    "muscle": "Biceps, Forearms",
+    "difficulty": "Beginner",
+    "videoId": "NFzTWp2qpiE",
+    "instructions": [
+      "Stand facing a low cable machine with a straight bar or EZ-bar attachment.",
+      "Grip the bar with an underhand grip, hands shoulder-width apart.",
+      "Keep your elbows at your sides and curl the bar up toward your chin.",
+      "Squeeze your biceps at the top.",
+      "Lower the bar slowly with full control.",
+      "The cable provides constant tension — unlike dumbbells."
+    ],
+    "tips": "Cables are especially effective for the bicep because tension remains constant throughout the movement."
   },
   {
     "id": "tricep-pushdown",
@@ -190,6 +931,101 @@
     "tips": "Keep your upper arms completely still. Only your forearms should move."
   },
   {
+    "id": "skull-crusher",
+    "name": "Skull Crusher",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 75,
+    "muscle": "Triceps (long head)",
+    "difficulty": "Intermediate",
+    "videoId": "d_KZxkY_0cM",
+    "instructions": [
+      "Lie flat on a bench holding an EZ-bar or dumbbells above your chest, arms extended.",
+      "Keeping your upper arms vertical, bend your elbows to lower the bar toward your forehead.",
+      "Stop just before the bar touches your forehead.",
+      "Extend your elbows to press the bar back up.",
+      "Keep your upper arms pointed straight up throughout.",
+      "Avoid flaring your elbows out to the sides."
+    ],
+    "tips": "The name is the reminder — keep control of the weight. Great for hitting the long head of the tricep."
+  },
+  {
+    "id": "overhead-tricep-extension",
+    "name": "Overhead Tricep Extension",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 60,
+    "muscle": "Triceps (long head)",
+    "difficulty": "Beginner",
+    "videoId": "YbX7Wd8jQ-Q",
+    "instructions": [
+      "Stand or sit holding a dumbbell with both hands above your head.",
+      "Keep your upper arms close to your head, elbows pointing up.",
+      "Lower the dumbbell behind your head by bending your elbows.",
+      "Lower until your forearms are parallel to the floor or below.",
+      "Press back up by extending your elbows fully.",
+      "Keep your core tight and avoid arching your back."
+    ],
+    "tips": "Overhead position maximally stretches the long head. Use a moderate weight and control every rep."
+  },
+  {
+    "id": "close-grip-bench-press",
+    "name": "Close-Grip Bench Press",
+    "sets": 3,
+    "reps": "8-10",
+    "rest": 90,
+    "muscle": "Triceps, Inner Chest",
+    "difficulty": "Intermediate",
+    "videoId": "nEF0bv2FW54",
+    "instructions": [
+      "Lie flat on a bench and grip the barbell with hands shoulder-width apart (narrower than normal).",
+      "Unrack the bar and hold it above your lower chest.",
+      "Lower the bar to your chest with elbows tucked close to your body.",
+      "Press the bar back up, driving through your triceps.",
+      "Keep your wrists stacked over your elbows throughout.",
+      "Fully extend at the top without locking out aggressively."
+    ],
+    "tips": "Hands too narrow can strain your wrists. Shoulder-width is the sweet spot for most people."
+  },
+  {
+    "id": "tricep-dip",
+    "name": "Tricep Dip",
+    "sets": 3,
+    "reps": "10-15",
+    "rest": 60,
+    "muscle": "Triceps, Chest, Shoulders",
+    "difficulty": "Beginner",
+    "videoId": "wjUmnZH528Y",
+    "instructions": [
+      "Sit on the edge of a bench with hands beside your hips gripping the edge.",
+      "Slide your hips off the bench and extend your legs out.",
+      "Lower your body by bending your elbows until your upper arms are parallel to the floor.",
+      "Keep your back close to the bench throughout.",
+      "Press through your palms to straighten your arms and lift back up.",
+      "For more tricep emphasis, keep legs straight; bent knees make it easier."
+    ],
+    "tips": "Add weight on your lap as you get stronger. Keep your elbows pointing backward, not flaring out."
+  },
+  {
+    "id": "cable-overhead-extension",
+    "name": "Cable Overhead Tricep Extension",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 60,
+    "muscle": "Triceps",
+    "difficulty": "Beginner",
+    "videoId": "YbX7Wd8jQ-Q",
+    "instructions": [
+      "Set a cable pulley to the highest position and attach a rope.",
+      "Face away from the machine, grab the rope behind your head with both hands.",
+      "Step forward to create tension, feet staggered for balance.",
+      "Keep your upper arms close to your head, elbows pointing forward.",
+      "Extend your elbows to press the rope forward and down.",
+      "Slowly return to the starting position with elbows bent."
+    ],
+    "tips": "The cable provides consistent tension in the stretched position — a major advantage over dumbbells."
+  },
+  {
     "id": "plank",
     "name": "Plank",
     "sets": 3,
@@ -209,22 +1045,421 @@
     "tips": "Quality over time. A solid 30-second plank beats a sloppy 60-second one."
   },
   {
-    "id": "lunge",
-    "name": "Walking Lunge",
+    "id": "crunch",
+    "name": "Crunch",
     "sets": 3,
-    "reps": "10 each leg",
-    "rest": 60,
-    "muscle": "Quads, Glutes, Hamstrings, Balance",
+    "reps": "15-20",
+    "rest": 45,
+    "muscle": "Abs (upper)",
     "difficulty": "Beginner",
-    "videoId": "L8fvwZS77PU",
+    "videoId": "Xyd_fa5zoEU",
     "instructions": [
-      "Stand upright with feet together, hands at your sides or on your hips.",
-      "Step forward with your right foot, taking a long stride.",
-      "Lower your back knee toward the floor — stop just before it touches.",
-      "Your front thigh should be parallel to the floor, knee over ankle.",
-      "Drive off your front heel to bring your back foot forward to meet it.",
-      "Alternate legs with each step forward."
+      "Lie on your back with knees bent and feet flat on the floor.",
+      "Place your hands lightly behind your head — don't pull on your neck.",
+      "Engage your core and curl your shoulders off the floor.",
+      "Focus on bringing your ribcage toward your hips.",
+      "Hold the contracted position for 1 second.",
+      "Lower back down slowly without fully relaxing."
     ],
-    "tips": "Keep your torso upright throughout. Don't let your front knee cave inward."
+    "tips": "Small movement done with full control beats a big movement done sloppily. Exhale on the way up."
+  },
+  {
+    "id": "bicycle-crunch",
+    "name": "Bicycle Crunch",
+    "sets": 3,
+    "reps": "15-20 each side",
+    "rest": 45,
+    "muscle": "Abs, Obliques",
+    "difficulty": "Beginner",
+    "videoId": "9FGilxCbdz8",
+    "instructions": [
+      "Lie on your back with hands behind your head and legs in a tabletop position.",
+      "Lift your shoulders off the floor and engage your core.",
+      "Bring your right elbow toward your left knee while extending your right leg.",
+      "Switch sides, bringing your left elbow toward your right knee.",
+      "Maintain a cycling motion with your legs.",
+      "Keep your lower back pressed to the floor."
+    ],
+    "tips": "Research consistently ranks this as one of the top ab exercises. Focus on rotation, not just elbow to knee."
+  },
+  {
+    "id": "leg-raise",
+    "name": "Lying Leg Raise",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 45,
+    "muscle": "Abs (lower), Hip Flexors",
+    "difficulty": "Beginner",
+    "videoId": "JB2oyawG9KI",
+    "instructions": [
+      "Lie flat on your back with legs straight and hands under your hips for support.",
+      "Engage your core and keep your lower back pressed down.",
+      "Raise both legs together until they're perpendicular to the floor.",
+      "Hold briefly at the top.",
+      "Lower your legs slowly — stop just before they touch the floor.",
+      "Repeat without letting your feet rest on the ground."
+    ],
+    "tips": "If you feel it in your lower back, reduce range of motion or bend your knees slightly."
+  },
+  {
+    "id": "russian-twist",
+    "name": "Russian Twist",
+    "sets": 3,
+    "reps": "15-20 each side",
+    "rest": 45,
+    "muscle": "Obliques, Core",
+    "difficulty": "Beginner",
+    "videoId": "wkD8rjkodUI",
+    "instructions": [
+      "Sit on the floor with knees bent and feet flat (or raised for more challenge).",
+      "Lean back slightly so your torso is at about 45° — feel your core engage.",
+      "Hold your hands together, a weight plate, or a medicine ball in front of you.",
+      "Rotate your torso to the right, touching the weight to the floor beside your hip.",
+      "Rotate to the left side and repeat.",
+      "Breathe out on each rotation."
+    ],
+    "tips": "Add a dumbbell or medicine ball to increase difficulty. Keep your spine long — don't round your back."
+  },
+  {
+    "id": "dead-bug",
+    "name": "Dead Bug",
+    "sets": 3,
+    "reps": "10 each side",
+    "rest": 45,
+    "muscle": "Core, Abs, Lower Back",
+    "difficulty": "Beginner",
+    "videoId": "4XLEnwUr1d8",
+    "instructions": [
+      "Lie on your back with arms pointing straight up and knees bent at 90° (tabletop).",
+      "Press your lower back firmly into the floor and keep it there throughout.",
+      "Slowly extend your right leg straight out while lowering your left arm overhead.",
+      "Stop just before touching the floor.",
+      "Return to the start position and repeat on the opposite side.",
+      "Breathe out as you extend, breathe in as you return."
+    ],
+    "tips": "The key is keeping your lower back flat the entire time. If it lifts, reduce your range of motion."
+  },
+  {
+    "id": "ab-wheel-rollout",
+    "name": "Ab Wheel Rollout",
+    "sets": 3,
+    "reps": "8-12",
+    "rest": 60,
+    "muscle": "Core, Abs, Lats, Shoulders",
+    "difficulty": "Intermediate",
+    "videoId": "p7j02V1fIoU",
+    "instructions": [
+      "Kneel on the floor and grip the ab wheel with both hands.",
+      "Start with the wheel directly below your shoulders.",
+      "Brace your core tightly and slowly roll the wheel forward.",
+      "Keep your back flat — don't let your hips drop or back arch.",
+      "Extend until your body is almost parallel to the floor.",
+      "Contract your abs to roll back to the starting position."
+    ],
+    "tips": "One of the hardest ab exercises. Start with partial rollouts and build to full extension over time."
+  },
+  {
+    "id": "mountain-climber",
+    "name": "Mountain Climber",
+    "sets": 3,
+    "reps": "20-30 each leg",
+    "rest": 45,
+    "muscle": "Core, Abs, Shoulders, Hip Flexors",
+    "difficulty": "Beginner",
+    "videoId": "nmwgirgXLYM",
+    "instructions": [
+      "Start in a high plank position with arms straight, hands under shoulders.",
+      "Keep your hips level and core braced.",
+      "Drive your right knee toward your chest.",
+      "Quickly switch, extending the right leg back while pulling the left knee in.",
+      "Continue alternating legs in a running motion.",
+      "Keep your hips down — don't let them bounce up."
+    ],
+    "tips": "Can be done slow (strength focus) or fast (cardio/conditioning). Both are effective."
+  },
+  {
+    "id": "hanging-knee-raise",
+    "name": "Hanging Knee Raise",
+    "sets": 3,
+    "reps": "12-15",
+    "rest": 60,
+    "muscle": "Abs (lower), Hip Flexors",
+    "difficulty": "Intermediate",
+    "videoId": "Pr1ieGZ5atk",
+    "instructions": [
+      "Hang from a pull-up bar with an overhand grip, arms fully extended.",
+      "Engage your core and avoid swinging.",
+      "Bend your knees and pull them up toward your chest.",
+      "Curl your pelvis slightly upward at the top to maximize ab contraction.",
+      "Hold briefly, then lower your legs slowly.",
+      "Avoid using momentum — keep movements controlled."
+    ],
+    "tips": "Progress to straight leg raises once knee raises become easy. Hanging variations are excellent for core strength."
+  },
+  {
+    "id": "side-plank",
+    "name": "Side Plank",
+    "sets": 3,
+    "reps": "30-45 sec each side",
+    "rest": 30,
+    "muscle": "Obliques, Core, Glutes",
+    "difficulty": "Beginner",
+    "videoId": "wqzrb7Q_kHE",
+    "instructions": [
+      "Lie on your side and prop yourself up on your forearm, elbow directly under your shoulder.",
+      "Stack your feet or place the top foot in front of the bottom.",
+      "Lift your hips off the ground, forming a straight line from head to feet.",
+      "Keep your core and glutes tight.",
+      "Hold for the target time.",
+      "Switch sides and repeat."
+    ],
+    "tips": "Drop your hip slightly toward the floor and lift it back up to make it harder — known as a side plank dip."
+  },
+  {
+    "id": "cable-crunch",
+    "name": "Cable Crunch",
+    "sets": 3,
+    "reps": "15-20",
+    "rest": 45,
+    "muscle": "Abs (upper and lower)",
+    "difficulty": "Beginner",
+    "videoId": "2fbujeH3F0E",
+    "instructions": [
+      "Kneel in front of a high cable pulley with a rope attachment.",
+      "Hold the rope behind your head with both hands.",
+      "Start upright with core engaged.",
+      "Crunch down by rounding your spine — bring your elbows toward your knees.",
+      "Squeeze your abs hard at the bottom.",
+      "Slowly return to the upright position without relaxing completely."
+    ],
+    "tips": "The cable provides resistance through the full range — one of the best weighted ab exercises."
+  },
+  {
+    "id": "kettlebell-swing",
+    "name": "Kettlebell Swing",
+    "sets": 4,
+    "reps": "15-20",
+    "rest": 60,
+    "muscle": "Glutes, Hamstrings, Core, Back",
+    "difficulty": "Intermediate",
+    "videoId": "YSxHifyI6s8",
+    "instructions": [
+      "Stand with feet slightly wider than shoulder-width with a kettlebell on the floor.",
+      "Hinge at the hips, grip the kettlebell with both hands, and hike it back between your legs.",
+      "Drive your hips forward explosively to swing the kettlebell up to chest height.",
+      "Let the kettlebell float momentarily at the top — arms should be parallel to the floor.",
+      "Let the kettlebell swing back down and hinge your hips back to absorb the momentum.",
+      "Repeat fluidly — it's all hips, not arms."
+    ],
+    "tips": "The swing is a hip hinge, not a squat. Keep your back flat and generate power from your glutes and hamstrings."
+  },
+  {
+    "id": "burpee",
+    "name": "Burpee",
+    "sets": 3,
+    "reps": "10-15",
+    "rest": 60,
+    "muscle": "Full Body, Core, Shoulders, Legs",
+    "difficulty": "Intermediate",
+    "videoId": "TU8QYVW0gDU",
+    "instructions": [
+      "Stand with feet shoulder-width apart.",
+      "Squat down and place your hands on the floor in front of you.",
+      "Jump or step your feet back into a push-up position.",
+      "Perform one push-up (optional but recommended).",
+      "Jump or step your feet back toward your hands.",
+      "Explode upward into a jump, reaching your arms overhead."
+    ],
+    "tips": "One of the most effective conditioning exercises. Scale by removing the push-up or the jump if needed."
+  },
+  {
+    "id": "sumo-deadlift",
+    "name": "Sumo Deadlift",
+    "sets": 3,
+    "reps": "6-8",
+    "rest": 120,
+    "muscle": "Glutes, Inner Quads, Hamstrings, Back",
+    "difficulty": "Intermediate",
+    "videoId": "RCN3rvBhZ-8",
+    "instructions": [
+      "Stand with feet very wide (1.5-2x shoulder width) and toes turned out 45°.",
+      "Grip the bar just inside your legs with an overhand or mixed grip.",
+      "Drop your hips, lift your chest, and ensure your spine is neutral.",
+      "Push the floor apart with your feet as you initiate the pull.",
+      "Keep the bar close to your body as it rises.",
+      "Lock out at the top by squeezing your glutes."
+    ],
+    "tips": "The sumo stance shifts emphasis to the glutes and inner quads compared to the conventional deadlift."
+  },
+  {
+    "id": "good-morning",
+    "name": "Good Morning",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 75,
+    "muscle": "Hamstrings, Lower Back, Glutes",
+    "difficulty": "Intermediate",
+    "videoId": "YA-h3n9L4Ko",
+    "instructions": [
+      "Stand with a barbell on your upper back, feet shoulder-width apart.",
+      "Brace your core and keep a soft bend in your knees.",
+      "Hinge forward at the hips, pushing them backward.",
+      "Lower your torso until it's close to parallel to the floor.",
+      "Feel the stretch in your hamstrings at the bottom.",
+      "Drive your hips forward to return to standing."
+    ],
+    "tips": "Start very light — the movement is deceptively difficult. Great for posterior chain strength."
+  },
+  {
+    "id": "dumbbell-shoulder-shrug",
+    "name": "Dumbbell Shrug",
+    "sets": 3,
+    "reps": "15-20",
+    "rest": 45,
+    "muscle": "Traps, Neck",
+    "difficulty": "Beginner",
+    "videoId": "cJRVVxmytaM",
+    "instructions": [
+      "Stand holding a heavy dumbbell in each hand at your sides.",
+      "Let your arms hang straight down — shoulders relaxed.",
+      "Shrug your shoulders straight up toward your ears as high as possible.",
+      "Hold at the top for 1-2 seconds.",
+      "Lower your shoulders slowly and fully.",
+      "Repeat for the target reps."
+    ],
+    "tips": "Don't roll your shoulders — that adds no benefit and risks injury. Straight up and down only."
+  },
+  {
+    "id": "seated-dumbbell-curl",
+    "name": "Seated Alternating Curl",
+    "sets": 3,
+    "reps": "10-12 each arm",
+    "rest": 60,
+    "muscle": "Biceps, Brachialis",
+    "difficulty": "Beginner",
+    "videoId": "soxrZlIl35U",
+    "instructions": [
+      "Sit on a bench with a dumbbell in each hand, arms hanging at your sides.",
+      "Keep your back straight and elbows at your sides.",
+      "Curl one dumbbell up toward the same shoulder, rotating your palm as you lift.",
+      "Squeeze at the top, then lower slowly.",
+      "Repeat on the opposite side, alternating each rep.",
+      "Keep upper arms stationary throughout."
+    ],
+    "tips": "Seated position prevents body swing — maximizing bicep tension on every rep."
+  },
+  {
+    "id": "reverse-curl",
+    "name": "Reverse Curl",
+    "sets": 3,
+    "reps": "10-12",
+    "rest": 60,
+    "muscle": "Brachialis, Forearms, Biceps",
+    "difficulty": "Beginner",
+    "videoId": "nkNqHJKkj6s",
+    "instructions": [
+      "Stand holding a barbell with an overhand grip (palms facing down), hands shoulder-width apart.",
+      "Keep your elbows pinned at your sides.",
+      "Curl the bar up toward your shoulders, maintaining the overhand grip throughout.",
+      "Squeeze at the top.",
+      "Lower slowly back to the starting position.",
+      "Maintain a neutral wrist position — don't bend your wrists backward."
+    ],
+    "tips": "Strengthens the brachialis and forearms — often neglected muscles that contribute to arm size."
+  },
+  {
+    "id": "wrist-curl",
+    "name": "Wrist Curl",
+    "sets": 3,
+    "reps": "15-20",
+    "rest": 30,
+    "muscle": "Forearms (Flexors)",
+    "difficulty": "Beginner",
+    "videoId": "obSCnN0ld7Q",
+    "instructions": [
+      "Sit on a bench and rest your forearms on your thighs with palms facing up.",
+      "Hold a barbell or dumbbells with hands shoulder-width apart.",
+      "Lower the weight by extending your wrists as far as comfortable.",
+      "Curl your wrists upward as far as possible.",
+      "Hold briefly at the top.",
+      "Lower slowly and repeat."
+    ],
+    "tips": "Often overlooked — strong forearms improve grip strength in every other exercise."
+  },
+  {
+    "id": "glute-bridge",
+    "name": "Glute Bridge",
+    "sets": 3,
+    "reps": "15-20",
+    "rest": 45,
+    "muscle": "Glutes, Hamstrings, Core",
+    "difficulty": "Beginner",
+    "videoId": "OUgsJ8-Vi0E",
+    "instructions": [
+      "Lie on your back with knees bent and feet flat on the floor, hip-width apart.",
+      "Place your arms at your sides, palms down.",
+      "Drive through your heels to lift your hips off the floor.",
+      "Squeeze your glutes hard at the top — your body should form a straight line from knees to shoulders.",
+      "Hold for 1-2 seconds.",
+      "Lower back down and repeat."
+    ],
+    "tips": "Add a barbell across your hips to make it a beginner hip thrust. Perfect for glute activation."
+  },
+  {
+    "id": "reverse-lunge",
+    "name": "Reverse Lunge",
+    "sets": 3,
+    "reps": "10-12 each leg",
+    "rest": 60,
+    "muscle": "Quads, Glutes, Hamstrings",
+    "difficulty": "Beginner",
+    "videoId": "xrPteyQLGAo",
+    "instructions": [
+      "Stand upright with feet together and hands at your sides or on your hips.",
+      "Step backward with your right foot, lowering your right knee toward the floor.",
+      "Your left thigh should be parallel to the floor, knee over ankle.",
+      "Keep your torso upright and core engaged.",
+      "Push through your left heel to return to standing.",
+      "Alternate legs or complete all reps on one side."
+    ],
+    "tips": "Easier on the knees than forward lunges. Great for those with knee sensitivity."
+  },
+  {
+    "id": "box-jump",
+    "name": "Box Jump",
+    "sets": 3,
+    "reps": "8-10",
+    "rest": 90,
+    "muscle": "Quads, Glutes, Calves, Core",
+    "difficulty": "Intermediate",
+    "videoId": "hxldG9FBpAg",
+    "instructions": [
+      "Stand facing a sturdy box or platform, feet shoulder-width apart.",
+      "Bend your knees slightly and swing your arms back.",
+      "Explode upward, driving your arms forward and jumping onto the box.",
+      "Land softly with both feet on top, bending your knees to absorb impact.",
+      "Stand fully upright on the box, then step (not jump) back down.",
+      "Reset and repeat."
+    ],
+    "tips": "Always step down — don't jump down. Start with a low box and increase height as confidence grows."
+  },
+  {
+    "id": "seated-leg-press-calf-raise",
+    "name": "Seated Calf Raise",
+    "sets": 4,
+    "reps": "15-20",
+    "rest": 45,
+    "muscle": "Calves (Soleus)",
+    "difficulty": "Beginner",
+    "videoId": "JbyjNymZOt0",
+    "instructions": [
+      "Sit in the seated calf raise machine with pads resting on your lower thighs.",
+      "Place the balls of your feet on the platform, heels hanging off.",
+      "Allow heels to drop as low as comfortable for a full stretch.",
+      "Press up onto your tiptoes as high as possible.",
+      "Hold the peak contraction for 1-2 seconds.",
+      "Lower slowly and repeat."
+    ],
+    "tips": "The seated position emphasizes the soleus, which lies beneath the gastrocnemius. Train both for full calf development."
   }
 ]
