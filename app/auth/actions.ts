@@ -32,7 +32,7 @@ export async function signUp(formData: FormData) {
 
     const username = formData.get("username") as string;
 
-    const { data, error } = await supabase.auth.signUp({
+    const { error } = await supabase.auth.signUp({
       email,
       password,
       options: { data: { username } },
@@ -40,17 +40,6 @@ export async function signUp(formData: FormData) {
 
     if (error) {
       return { error: error.message };
-    }
-
-    // Insert username into profiles table
-    if (data.user) {
-      const { error: profileError } = await supabase
-        .from("profiles")
-        .insert({ id: data.user.id, username });
-
-      if (profileError) {
-        return { error: profileError.message };
-      }
     }
 
     redirect("/welcome");
