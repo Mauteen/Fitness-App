@@ -52,13 +52,13 @@ export default function SideNav() {
 
   if (pathname.startsWith("/auth") || pathname === "/welcome") return null;
 
-  async function handleSignOut() {
-    const supabase = createClient();
-    await supabase.auth.signOut();
+  function handleSignOut() {
+    // Clear local state immediately for instant response
     localStorage.removeItem("fitguide_no_persist");
-    // Reset progress store so next user starts fresh
     useProgressStore.setState({ completedDates: [], streak: 0, lastCompletedDate: null, hydrated: false });
     router.push("/auth/login");
+    // Sign out from Supabase in the background
+    createClient().auth.signOut();
   }
 
   return (
