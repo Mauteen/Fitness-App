@@ -51,3 +51,12 @@ export interface ProgressData {
   streak: number;
   lastCompletedDate: string | null;
 }
+
+export type GoalType = "weight_loss" | "muscle_gain" | "general_fitness";
+
+export interface GoalMeta {
+  label: string;
+  tagline: string;
+  color: string;
+  emoji: string;
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "day": 1,
+    "name": "Chest & Triceps",
+    "focus": "Push Day",
+    "description": "Build your pushing muscles with compound and isolation work.",
+    "exerciseIds": ["bench-press", "push-up", "tricep-pushdown", "plank"]
+  },
+  {
+    "day": 2,
+    "name": "Back & Biceps",
+    "focus": "Pull Day",
+    "description": "Strengthen your pulling muscles for a balanced upper body.",
+    "exerciseIds": ["lat-pulldown", "dumbbell-row", "bicep-curl", "plank"]
+  },
+  {
+    "day": 3,
+    "name": "Active Recovery",
+    "focus": "Rest Day",
+    "description": "Light stretching and walking to aid muscle recovery. No lifting today.",
+    "exerciseIds": []
+  },
+  {
+    "day": 4,
+    "name": "Legs",
+    "focus": "Leg Day",
+    "description": "Train your biggest muscle groups for strength and metabolism.",
+    "exerciseIds": ["squat", "leg-press", "lunge", "plank"]
+  },
+  {
+    "day": 5,
+    "name": "Shoulders",
+    "focus": "Shoulder Day",
+    "description": "Build rounded, strong shoulders for that V-taper look.",
+    "exerciseIds": ["overhead-press", "dumbbell-lateral-raise", "dumbbell-row", "plank"]
+  },
+  {
+    "day": 6,
+    "name": "Full Body",
+    "focus": "Full Body",
+    "description": "Hit every major muscle group in one complete session.",
+    "exerciseIds": ["squat", "bench-press", "dumbbell-row", "overhead-press", "bicep-curl", "tricep-pushdown"]
+  },
+  {
+    "day": 7,
+    "name": "Rest Day",
+    "focus": "Rest Day",
+    "description": "Full rest. Eat well, sleep well, and come back stronger tomorrow.",
+    "exerciseIds": []
+  }
+]

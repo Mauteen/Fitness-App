@@ -5,6 +5,8 @@ import Link from "next/link";
 import { getAllWorkouts, getWorkoutByDay, getTodayWorkoutDay, getGreeting, formatShortDate, getWeekDates } from "@/lib/workoutUtils";
 import { WorkoutDay } from "@/lib/types";
 import { useProgressStore } from "@/store/progressStore";
+import { useGoalStore, GOAL_META } from "@/store/goalStore";
+import GoalSelectorModal from "@/components/GoalSelectorModal";
 import { createClient } from "@/lib/supabase/client";
 
 export default function HomePage() {
@@ -13,10 +15,15 @@ export default function HomePage() {
   const [todayDate, setTodayDate] = useState("");
   const [weekDates, setWeekDates] = useState<Record<number, Date>>({});
   const [username, setUsername] = useState("");
-  const allWorkouts = getAllWorkouts();
+  const [showGoalModal, setShowGoalModal] = useState(false);
 
   const completedDates = useProgressStore(state => state.completedDates);
   const hydrate = useProgressStore(state => state.hydrate);
+  const goal = useGoalStore(state => state.goal);
+  const hydrateGoal = useGoalStore(state => state.hydrate);
+  const setGoal = useGoalStore(state => state.setGoal);
+
+  const allWorkouts = getAllWorkouts(goal);
 
   useEffect(() => {
     const wd = getWeekDates();
@@ -25,6 +32,7 @@ export default function HomePage() {
     setTodayDate(formatShortDate(new Date()));
     setWeekDates(wd);
     hydrate();
+    hydrateGoal();
 
     const supabase = createClient();
     supabase.auth.getUser().then(({ data: { user } }) => {
@@ -32,12 +40,13 @@ export default function HomePage() {
         setUsername(user.user_metadata.username);
       }
     });
-  }, [hydrate]);
+  }, [hydrate, hydrateGoal]);
 
   const todayStr = new Date().toISOString().split("T")[0];
   const isTodayComplete = completedDates.includes(todayStr);
 
-  const todayWorkout = getWorkoutByDay(todayDay);
+  const todayWorkout = getWorkoutByDay(todayDay, goal);
+  const goalMeta = GOAL_META[goal];
   const isRestDay = todayWorkout?.exerciseIds.length === 0;
 
   const focusColors: Record<string, string> = {
@@ -254,6 +263,25 @@ export default function HomePage() {
           flex-shrink: 0;
         }
         .arrow-icon { color: #333; margin-left: 0.75rem; flex-shrink: 0; }
+        .goal-chip {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-family: 'DM Sans', sans-serif;
+          font-weight: 600;
+          font-size: 0.72rem;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          padding: 0.35rem 0.75rem;
+          border-radius: 999px;
+          border: 1px solid;
+          cursor: pointer;
+          transition: opacity 0.15s ease, transform 0.1s ease;
+          margin-top: 1rem;
+          background: transparent;
+        }
+        .goal-chip:hover { opacity: 0.75; transform: translateY(-1px); }
+        .goal-chip:active { transform: scale(0.97); }
       `}</style>
 
       <div className="page min-h-screen bg-[#0a0a0a]">
@@ -270,6 +298,17 @@ export default function HomePage() {
                 ? "Recovery is where the gains happen."
                 : "Let's get it."}
             </p>
+            <button
+              className="goal-chip"
+              style={{ color: goalMeta.color, borderColor: `${goalMeta.color}44` }}
+              onClick={() => setShowGoalModal(true)}
+            >
+              <span>{goalMeta.emoji}</span>
+              <span>{goalMeta.label}</span>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
           </div>
         </div>
 
@@ -355,6 +394,14 @@ export default function HomePage() {
 
         </div>
       </div>
+
+      {showGoalModal && (
+        <GoalSelectorModal
+          currentGoal={goal}
+          onSelect={setGoal}
+          onClose={() => setShowGoalModal(false)}
+        />
+      )}
     </>
   );
 }

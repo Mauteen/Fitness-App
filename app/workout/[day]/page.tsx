@@ -7,6 +7,7 @@ import ExerciseCard from "@/components/ExerciseCard";
 import ExerciseGuidanceModal from "@/components/ExerciseGuidanceModal";
 import { Exercise } from "@/lib/types";
 import { useProgressStore } from "@/store/progressStore";
+import { useGoalStore } from "@/store/goalStore";
 
 export default function WorkoutDayPage({
   params,
@@ -15,17 +16,21 @@ export default function WorkoutDayPage({
 }) {
   const { day } = use(params);
   const dayNum = parseInt(day, 10);
-  const workout = getWorkoutByDay(dayNum);
   const [selectedExercise, setSelectedExercise] = useState<Exercise | null>(null);
   const [todayDay, setTodayDay] = useState<number | null>(null);
   const completedDates = useProgressStore(state => state.completedDates);
   const markComplete = useProgressStore(state => state.markComplete);
   const hydrate = useProgressStore(state => state.hydrate);
+  const goal = useGoalStore(state => state.goal);
+  const hydrateGoal = useGoalStore(state => state.hydrate);
+
+  const workout = getWorkoutByDay(dayNum, goal);
 
   useEffect(() => {
     hydrate();
+    hydrateGoal();
     setTodayDay(getTodayWorkoutDay());
-  }, [hydrate]);
+  }, [hydrate, hydrateGoal]);
 
   const isToday = todayDay === dayNum;
   const todayStr = new Date().toISOString().split("T")[0];

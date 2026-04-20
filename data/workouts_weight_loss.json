@@ -1,0 +1,51 @@
+[
+  {
+    "day": 1,
+    "name": "Upper Body Burn",
+    "focus": "Fat Burn",
+    "description": "High-rep upper body work to maximize calorie burn and build lean muscle.",
+    "exerciseIds": ["push-up", "dumbbell-row", "overhead-press", "plank"]
+  },
+  {
+    "day": 2,
+    "name": "Cardio & Core",
+    "focus": "Cardio",
+    "description": "Explosive movements and core work to torch calories and strengthen your midsection.",
+    "exerciseIds": ["burpee", "mountain-climber", "bicycle-crunch", "plank"]
+  },
+  {
+    "day": 3,
+    "name": "Active Recovery",
+    "focus": "Rest Day",
+    "description": "Light stretching and walking. Let your body recover and prepare for the next push.",
+    "exerciseIds": []
+  },
+  {
+    "day": 4,
+    "name": "Lower Body Burn",
+    "focus": "Fat Burn",
+    "description": "Target your biggest muscles for maximum calorie expenditure and leg definition.",
+    "exerciseIds": ["squat", "lunge", "box-jump", "hip-thrust"]
+  },
+  {
+    "day": 5,
+    "name": "Full Body Circuit",
+    "focus": "Full Body",
+    "description": "Hit every muscle group in a calorie-blasting full body circuit.",
+    "exerciseIds": ["burpee", "push-up", "squat", "dumbbell-row", "mountain-climber", "plank"]
+  },
+  {
+    "day": 6,
+    "name": "Core Conditioning",
+    "focus": "Core",
+    "description": "Strengthen and define your core with targeted exercises.",
+    "exerciseIds": ["kettlebell-swing", "plank", "russian-twist", "dead-bug", "bicycle-crunch"]
+  },
+  {
+    "day": 7,
+    "name": "Rest Day",
+    "focus": "Rest Day",
+    "description": "Full rest. Eat in a slight deficit, hydrate, and sleep well for results.",
+    "exerciseIds": []
+  }
+]

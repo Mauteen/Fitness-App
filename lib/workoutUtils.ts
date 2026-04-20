@@ -1,15 +1,23 @@
-import workoutsData from "@/data/workouts.json";
+import weightLossData from "@/data/workouts_weight_loss.json";
+import muscleGainData from "@/data/workouts_muscle_gain.json";
+import generalFitnessData from "@/data/workouts_general_fitness.json";
 import exercisesData from "@/data/exercises.json";
-import { Exercise, WorkoutDay, WorkoutWithExercises } from "./types";
+import { Exercise, GoalType, WorkoutDay, WorkoutWithExercises } from "./types";
 
-const workouts = workoutsData as WorkoutDay[];
+const programMap: Record<GoalType, WorkoutDay[]> = {
+  weight_loss: weightLossData as WorkoutDay[],
+  muscle_gain: muscleGainData as WorkoutDay[],
+  general_fitness: generalFitnessData as WorkoutDay[],
+};
+
 const exercises = exercisesData as Exercise[];
 
-export function getAllWorkouts(): WorkoutDay[] {
-  return workouts;
+export function getAllWorkouts(goal: GoalType = "general_fitness"): WorkoutDay[] {
+  return programMap[goal];
 }
 
-export function getWorkoutByDay(day: number): WorkoutWithExercises | null {
+export function getWorkoutByDay(day: number, goal: GoalType = "general_fitness"): WorkoutWithExercises | null {
+  const workouts = programMap[goal];
   const workout = workouts.find((w) => w.day === day);
   if (!workout) return null;
 

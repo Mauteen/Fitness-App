@@ -1,0 +1,51 @@
+[
+  {
+    "day": 1,
+    "name": "Chest & Triceps",
+    "focus": "Push Day",
+    "description": "Heavy compound pressing to build a thick chest and powerful triceps.",
+    "exerciseIds": ["bench-press", "incline-bench-press", "tricep-pushdown", "skull-crusher"]
+  },
+  {
+    "day": 2,
+    "name": "Back & Biceps",
+    "focus": "Pull Day",
+    "description": "Pull heavy to build a wide back and peaked biceps.",
+    "exerciseIds": ["deadlift", "lat-pulldown", "bent-over-row", "bicep-curl"]
+  },
+  {
+    "day": 3,
+    "name": "Rest Day",
+    "focus": "Rest Day",
+    "description": "Full rest for muscle protein synthesis. Eat in a calorie surplus — this is when you grow.",
+    "exerciseIds": []
+  },
+  {
+    "day": 4,
+    "name": "Legs",
+    "focus": "Leg Day",
+    "description": "Heavy leg work to build mass and naturally boost anabolic hormones.",
+    "exerciseIds": ["squat", "leg-press", "romanian-deadlift", "bulgarian-split-squat"]
+  },
+  {
+    "day": 5,
+    "name": "Shoulders & Arms",
+    "focus": "Shoulder Day",
+    "description": "Build wide shoulders and defined arms for that classic V-taper look.",
+    "exerciseIds": ["overhead-press", "dumbbell-lateral-raise", "barbell-curl", "overhead-tricep-extension"]
+  },
+  {
+    "day": 6,
+    "name": "Full Body Power",
+    "focus": "Full Body",
+    "description": "Tie everything together with compound movements across all muscle groups.",
+    "exerciseIds": ["squat", "bench-press", "deadlift", "overhead-press", "bicep-curl", "tricep-pushdown"]
+  },
+  {
+    "day": 7,
+    "name": "Rest Day",
+    "focus": "Rest Day",
+    "description": "Full rest. Eat well, sleep 8 hours, and trust the process.",
+    "exerciseIds": []
+  }
+]
