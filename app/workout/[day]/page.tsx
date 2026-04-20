@@ -5,9 +5,11 @@ import Link from "next/link";
 import { getWorkoutByDay, getTodayWorkoutDay } from "@/lib/workoutUtils";
 import ExerciseCard from "@/components/ExerciseCard";
 import ExerciseGuidanceModal from "@/components/ExerciseGuidanceModal";
-import { Exercise } from "@/lib/types";
+import ExerciseLogModal from "@/components/ExerciseLogModal";
+import { Exercise, ExerciseSet } from "@/lib/types";
 import { useProgressStore } from "@/store/progressStore";
 import { useGoalStore } from "@/store/goalStore";
+import { useExerciseLogStore } from "@/store/exerciseLogStore";
 
 export default function WorkoutDayPage({
   params,
@@ -17,20 +19,28 @@ export default function WorkoutDayPage({
   const { day } = use(params);
   const dayNum = parseInt(day, 10);
   const [selectedExercise, setSelectedExercise] = useState<Exercise | null>(null);
+  const [logExercise, setLogExercise] = useState<Exercise | null>(null);
   const [todayDay, setTodayDay] = useState<number | null>(null);
   const completedDates = useProgressStore(state => state.completedDates);
   const markComplete = useProgressStore(state => state.markComplete);
   const hydrate = useProgressStore(state => state.hydrate);
   const goal = useGoalStore(state => state.goal);
   const hydrateGoal = useGoalStore(state => state.hydrate);
+  const { hydrate: hydrateLog, saveLog, getLogsForExercise, getLastLogForExercise } = useExerciseLogStore();
 
   const workout = getWorkoutByDay(dayNum, goal);
 
   useEffect(() => {
     hydrate();
     hydrateGoal();
+    hydrateLog();
     setTodayDay(getTodayWorkoutDay());
-  }, [hydrate, hydrateGoal]);
+  }, [hydrate, hydrateGoal, hydrateLog]);
+
+  function handleSaveLog(sets: ExerciseSet[], notes: string) {
+    if (!logExercise) return;
+    saveLog(logExercise.id, logExercise.name, sets, notes);
+  }
 
   const isToday = todayDay === dayNum;
   const todayStr = new Date().toISOString().split("T")[0];
@@ -210,6 +220,10 @@ export default function WorkoutDayPage({
                     exercise={exercise}
                     index={i}
                     onViewGuide={setSelectedExercise}
+                    onLog={setLogExercise}
+                    hasLog={getLogsForExercise(exercise.id).some(
+                      (l) => l.date === new Date().toISOString().split("T")[0]
+                    )}
                   />
                 ))}
               </div>
@@ -247,6 +261,16 @@ export default function WorkoutDayPage({
         exercise={selectedExercise}
         onClose={() => setSelectedExercise(null)}
       />
+
+      {logExercise && (
+        <ExerciseLogModal
+          exercise={logExercise}
+          lastLog={getLastLogForExercise(logExercise.id)}
+          allLogs={getLogsForExercise(logExercise.id)}
+          onSave={handleSaveLog}
+          onClose={() => setLogExercise(null)}
+        />
+      )}
     </>
   );
 }

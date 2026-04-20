@@ -54,6 +54,21 @@ export interface ProgressData {
 
 export type GoalType = "weight_loss" | "muscle_gain" | "general_fitness";
 
+export interface ExerciseSet {
+  setNum: number;
+  reps: number | "";
+  weightKg: number | "";
+}
+
+export interface ExerciseLog {
+  id: string;
+  exerciseId: string;
+  exerciseName: string;
+  date: string;
+  sets: ExerciseSet[];
+  notes: string;
+}
+
 export interface GoalMeta {
   label: string;
   tagline: string;

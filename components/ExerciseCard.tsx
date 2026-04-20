@@ -7,9 +7,11 @@ interface Props {
   exercise: Exercise;
   index: number;
   onViewGuide: (exercise: Exercise) => void;
+  onLog?: (exercise: Exercise) => void;
+  hasLog?: boolean;
 }
 
-export default function ExerciseCard({ exercise, index, onViewGuide }: Props) {
+export default function ExerciseCard({ exercise, index, onViewGuide, onLog, hasLog }: Props) {
   return (
     <>
       <style>{`
@@ -77,6 +79,32 @@ export default function ExerciseCard({ exercise, index, onViewGuide }: Props) {
         .guide-btn:active {
           transform: scale(0.98);
         }
+        .log-btn {
+          background: transparent;
+          border: 1px solid #2a2a2a;
+          color: #555;
+          font-family: 'DM Sans', sans-serif;
+          font-weight: 600;
+          font-size: 0.75rem;
+          letter-spacing: 0.05em;
+          padding: 0.45rem 1rem;
+          border-radius: 8px;
+          transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
+        .log-btn:hover {
+          background: #1a1a1a;
+          border-color: #444;
+          color: #aaa;
+          transform: scale(1.02);
+        }
+        .log-btn:active { transform: scale(0.98); }
+        .log-btn.logged {
+          border-color: #22c55e44;
+          color: #22c55e;
+          background: #22c55e0a;
+        }
         .muscle-label {
           font-size: 0.7rem;
           color: #555;
@@ -106,13 +134,24 @@ export default function ExerciseCard({ exercise, index, onViewGuide }: Props) {
                 <h3 className="exercise-name text-xl md:text-2xl truncate">{exercise.name}</h3>
                 <p className="muscle-label mt-0.5">{exercise.muscle}</p>
               </div>
-              <button
-                onClick={() => onViewGuide(exercise)}
-                className="guide-btn"
-                aria-label={`View guide for ${exercise.name}`}
-              >
-                VIEW GUIDE
-              </button>
+              <div className="flex items-center gap-2">
+                {onLog && (
+                  <button
+                    onClick={() => onLog(exercise)}
+                    className={`log-btn ${hasLog ? "logged" : ""}`}
+                    aria-label={`Log ${exercise.name}`}
+                  >
+                    {hasLog ? "✓ LOG" : "LOG"}
+                  </button>
+                )}
+                <button
+                  onClick={() => onViewGuide(exercise)}
+                  className="guide-btn"
+                  aria-label={`View guide for ${exercise.name}`}
+                >
+                  GUIDE
+                </button>
+              </div>
             </div>
 
             {/* Stats row */}
