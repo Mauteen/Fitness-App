@@ -2,6 +2,8 @@
 
 import { useEffect } from "react";
 import { useProgressStore } from "@/store/progressStore";
+import { useExerciseLogStore } from "@/store/exerciseLogStore";
+import { ExerciseLog } from "@/lib/types";
 
 function todayStr() {
   return new Date().toISOString().split("T")[0];
@@ -20,18 +22,65 @@ function formatDate(dateStr: string): string {
   return d.toLocaleDateString("en-NG", { weekday: "short", month: "short", day: "numeric" });
 }
 
+interface PR {
+  exerciseName: string;
+  weightKg: number;
+  reps: number | "";
+  date: string;
+}
+
 export default function ProgressPage() {
   const { completedDates, streak, hydrate } = useProgressStore();
+  const { logs, hydrate: hydrateLog } = useExerciseLogStore();
 
   useEffect(() => {
     hydrate();
-  }, [hydrate]);
+    hydrateLog();
+  }, [hydrate, hydrateLog]);
 
   const today = todayStr();
   const last30 = getLast30Days();
   const completedSet = new Set(completedDates);
   const totalWorkouts = completedDates.length;
   const completedThisMonth = last30.filter(d => completedSet.has(d)).length;
+
+  // Exercise log derived stats
+  const allLogEntries: ExerciseLog[] = Object.values(logs).flat();
+  const totalExerciseSessions = allLogEntries.length;
+
+  const totalVolume = allLogEntries.reduce((acc, log) => {
+    return acc + log.sets.reduce((s, set) => {
+      const w = typeof set.weightKg === "number" ? set.weightKg : 0;
+      const r = typeof set.reps === "number" ? set.reps : 0;
+      return s + w * r;
+    }, 0);
+  }, 0);
+
+  // Personal records: best set (by weight) per exercise
+  const prMap: Record<string, PR> = {};
+  for (const [, exerciseLogs] of Object.entries(logs)) {
+    for (const log of exerciseLogs) {
+      for (const set of log.sets) {
+        const w = typeof set.weightKg === "number" ? set.weightKg : 0;
+        if (w === 0) continue;
+        const existing = prMap[log.exerciseId];
+        if (!existing || w > existing.weightKg) {
+          prMap[log.exerciseId] = {
+            exerciseName: log.exerciseName,
+            weightKg: w,
+            reps: set.reps,
+            date: log.date,
+          };
+        }
+      }
+    }
+  }
+  const personalRecords = Object.values(prMap).sort((a, b) => b.weightKg - a.weightKg);
+
+  // Recent exercise logs (last 5 sessions)
+  const recentExerciseLogs = [...allLogEntries]
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 5);
 
   const recentHistory = [...completedDates]
     .filter(d => completedSet.has(d))
@@ -128,6 +177,7 @@ export default function ProgressPage() {
           grid-template-columns: 1fr 1fr;
           gap: 10px;
         }
+        /* 2x2 grid handles 4 cards naturally */
         .stat-card {
           background: linear-gradient(135deg, #141414 0%, #0f0f0f 100%);
           border: 1px solid #1e1e1e;
@@ -224,6 +274,102 @@ export default function ProgressPage() {
           margin-bottom: 0.5rem;
         }
         .empty-text { font-size: 0.82rem; color: #555; line-height: 1.6; }
+
+        /* PR section */
+        .pr-card {
+          background: linear-gradient(135deg, #141414 0%, #0f0f0f 100%);
+          border: 1px solid #1e1e1e;
+          border-radius: 14px;
+          padding: 0.9rem 1rem;
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+        }
+        .pr-badge {
+          background: #22c55e14;
+          border: 1px solid #22c55e33;
+          border-radius: 8px;
+          width: 36px;
+          height: 36px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          font-size: 0.65rem;
+          font-family: 'Bebas Neue', sans-serif;
+          letter-spacing: 0.08em;
+          color: #22c55e;
+        }
+        .pr-name {
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.85rem;
+          font-weight: 600;
+          color: #ccc;
+          line-height: 1.2;
+        }
+        .pr-detail {
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.72rem;
+          color: #555;
+          margin-top: 2px;
+        }
+        .pr-weight {
+          margin-left: auto;
+          text-align: right;
+          flex-shrink: 0;
+        }
+        .pr-weight-num {
+          font-family: 'Bebas Neue', sans-serif;
+          font-size: 1.4rem;
+          color: white;
+          line-height: 1;
+          letter-spacing: 0.02em;
+        }
+        .pr-weight-unit {
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.65rem;
+          color: #555;
+          font-weight: 600;
+        }
+
+        /* Exercise log history */
+        .log-history-item {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          padding: 0.85rem 0;
+          border-bottom: 1px solid #141414;
+        }
+        .log-history-item:last-child { border-bottom: none; }
+        .log-history-dot {
+          width: 8px; height: 8px;
+          border-radius: 50%;
+          background: #3b82f6;
+          flex-shrink: 0;
+        }
+        .log-history-name {
+          font-size: 0.85rem;
+          color: #888;
+          font-weight: 500;
+        }
+        .log-history-meta {
+          font-size: 0.72rem;
+          color: #444;
+          margin-top: 2px;
+        }
+        .log-history-badge {
+          margin-left: auto;
+          font-size: 0.65rem;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+          color: #3b82f6;
+          background: #3b82f614;
+          border: 1px solid #3b82f633;
+          border-radius: 999px;
+          padding: 0.15rem 0.5rem;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
       `}</style>
 
       <div className="progress-page min-h-screen bg-[#0a0a0a] pb-12">
@@ -263,6 +409,18 @@ export default function ProgressPage() {
               <div className="stat-value" style={{ color: "#f59e0b" }}>{completedThisMonth}</div>
               <div className="stat-label">Last 30 Days</div>
             </div>
+            <div className="stat-card">
+              <div className="stat-icon">📝</div>
+              <div className="stat-value" style={{ color: "#3b82f6" }}>{totalExerciseSessions}</div>
+              <div className="stat-label">Sets Logged</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-icon">⚡</div>
+              <div className="stat-value" style={{ color: "#a855f7", fontSize: totalVolume >= 10000 ? "1.6rem" : "2.5rem" }}>
+                {totalVolume >= 1000 ? `${(totalVolume / 1000).toFixed(1)}k` : totalVolume}
+              </div>
+              <div className="stat-label">Volume (kg)</div>
+            </div>
           </div>
 
           {/* Heatmap */}
@@ -288,6 +446,59 @@ export default function ProgressPage() {
               </div>
             </div>
           </div>
+
+          {/* Personal Records */}
+          {personalRecords.length > 0 && (
+            <div>
+              <p className="section-label mb-4">Personal Records</p>
+              <div className="flex flex-col gap-2">
+                {personalRecords.map((pr) => (
+                  <div key={pr.exerciseName} className="pr-card">
+                    <div className="pr-badge">PR</div>
+                    <div className="flex-1 min-w-0">
+                      <p className="pr-name truncate">{pr.exerciseName}</p>
+                      <p className="pr-detail">{formatDate(pr.date)}</p>
+                    </div>
+                    <div className="pr-weight">
+                      <div className="pr-weight-num">{pr.weightKg}</div>
+                      <div className="pr-weight-unit">KG {pr.reps !== "" ? `× ${pr.reps}` : ""}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Recent Exercise Logs */}
+          {recentExerciseLogs.length > 0 && (
+            <div>
+              <p className="section-label mb-4">Recent Sets</p>
+              <div>
+                {recentExerciseLogs.map((log) => {
+                  const bestSet = log.sets.reduce((best, s) => {
+                    const w = typeof s.weightKg === "number" ? s.weightKg : 0;
+                    const bw = typeof best.weightKg === "number" ? best.weightKg : 0;
+                    return w > bw ? s : best;
+                  }, log.sets[0]);
+                  const setsLogged = log.sets.filter(s => s.reps !== "" || s.weightKg !== "").length;
+                  return (
+                    <div key={log.id} className="log-history-item">
+                      <div className="log-history-dot" />
+                      <div className="flex-1 min-w-0">
+                        <p className="log-history-name truncate">{log.exerciseName}</p>
+                        <p className="log-history-meta">{formatDate(log.date)} · {setsLogged} sets</p>
+                      </div>
+                      {bestSet && bestSet.weightKg !== "" && (
+                        <span className="log-history-badge">
+                          {bestSet.weightKg}kg × {bestSet.reps}
+                        </span>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {/* History */}
           <div>
