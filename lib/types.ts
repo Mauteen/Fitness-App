@@ -75,3 +75,23 @@ export interface GoalMeta {
   color: string;
   emoji: string;
 }
+
+export interface CustomExercise {
+  exerciseId: string;
+  name: string;
+  muscle: string;
+}
+
+export interface CustomWorkoutDay {
+  id: string;
+  name: string;
+  dayOfWeek?: number;
+  exercises: CustomExercise[];
+}
+
+export interface CustomWorkoutPlan {
+  id: string;
+  name: string;
+  days: CustomWorkoutDay[];
+  createdAt: string;
+}
